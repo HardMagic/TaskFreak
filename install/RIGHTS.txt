@@ -1,0 +1,72 @@
+TaskFreak! Multi Users 0.6.x
+============================
+
+You can modify the default behavior of this application by editing the
+configuration file (include/config.php).
+
+Access rights configuration consists of a series of 0s and 1s in two separate
+arrays:
+- confProjectRights that sets the permissions related to projects the user
+  is associated with
+- confGlobalRights that sets the global permissions of the user
+
+For a complete description, read the comments in config.php.
+
+Here's a few questions you might ask yourself:
+
+1. What's public, internal, private tasks?
+------------------------------------------
+- a public task can be seen by everybody 
+  (guests need to be associated to the project the task belongs to)
+- an internal task can be seen by everybody but guests
+- a private task can only be seen by its author and the user it is asssigned to
+
+2. What's a guest?
+------------------
+With the default settings, a guest is typically a client:
+- only sees public tasks belonging to projects he is associated with
+- can not get details about other users, and other projects
+- can not see comments or post any
+
+Guests can not see tasks not associated to any project.
+
+3. How do I make my guests able to read and post comments?
+----------------------------------------------------------
+When associating a user to a project, set him as an "official".
+That way, he will be able to see comments and post new ones.
+
+4. How can I have my guests access tasks not associated projects?
+-----------------------------------------------------------------
+Edit confGlobalRights, and set bit number 13 (view public tasks) to 1:
+
+$GLOBALS['confGlobalRights'] = array(
+	1 => '000000000000100',	// guests
+	...
+
+5. How do I have my guests able to read and post comments on theses tasks?
+--------------------------------------------------------------------------
+Edit the first line in confProjectRights:
+- 1st bit allows user to see comments
+- 2nd bit allows user to post comments
+
+$GLOBALS['confProjectRights'] = array(
+	0 => '11000',
+	...
+
+6. What's an intern?
+--------------------
+Typically someone that works in your team: 
+- only sees tasks belonging to projects he is associated with
+- accesses internal tasks
+- can create new tasks
+- see all users details
+
+7. What's a manager?
+--------------------
+A manager can:
+- access his own projects and can create new ones
+- can create new users
+
+8. And what's an administrator then?
+------------------------------------
+Admins can see and edit everything.

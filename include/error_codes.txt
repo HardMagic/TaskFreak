@@ -1,0 +1,31 @@
+Error codes
+===========
+
+Registration
+------------
+101 : can not save new user in database
+102 : can not send confirmation email
+103 : activation: username not found
+104 : activation: wrong activation code
+
+Teams
+-----
+424 : team not found
+425 : can not access the team (not a member of this team)
+426 : trying to edit team without admin or team leader privileges
+
+Issues
+------
+404 : can not find / load issue
+405 : no rights to access issue (user does not belong to corresponding team)
+
+Issues discussion
+-----------------
+414 : can not delete comment (invalid primary key)
+415 : do not have the right to delete comment
+
+Resources
+---------
+454 : can not find / load resource
+455 : trying to see details of a non published resource
+456 : trying to edit resource without permission (not admin)

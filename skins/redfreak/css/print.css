@@ -1,0 +1,35 @@
+html, body {
+	margin: 0 !important;
+}
+#header {
+	display:none;
+}
+#container {
+	position: relative;
+	top: 0px !important;
+	width: 99%;
+}
+h1.printheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	margin:0px 0px 12px 0px;
+	display: block;
+}
+div.printbox {
+	margin: 5px 0px 15px 0px;
+	padding: .9em;
+	width: auto;
+	border: 1px solid #333;
+}
+div.printbox h2 {
+	page-break-after: avoid;
+}
+div.printbox table {
+	page-break-before: auto;
+}
+div.printbox td {
+	font-size: .9em;
+}
+#footer {
+	display: none;
+}

@@ -1,0 +1,28 @@
+/* access levels styles */
+.level_pad {
+	padding-right: 8px;
+}
+.level_high {
+	padding-right: 8px;
+	font-weight: bold;
+}
+.level_0 {
+	/* not defined */
+	color: #999;
+}
+.level_1 {
+	/* guest */
+	color: #000;
+}
+.level_2 {
+	/* intern */
+	color: #090;
+}
+.level_3 {
+	/* manager */
+	color: #909;
+}
+.level_4 {
+	/* administrator */
+	color: #c00;
+}

@@ -1,0 +1,9 @@
+
+check if "TZN_DATE_FRM" is defined in config.php
+	define("TZN_DATE_FRM","%y-%m-%d");
+
+
+if you use charcode iso-8859-1 change this line in common.php
+
+//setLocale(LC_ALL, 'sv_SE.UTF-8', 'sv_SE.utf8', 'sv_SE', 'swedish');
+setLocale(LC_ALL, 'sv_SE.ISO-8859-1', 'sv_SE.iso8859-1', 'sv_SE', 'swedish'); 
