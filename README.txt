@@ -1,2 +1,1 @@
-Please open the README.txt file from the install folder for information
-on how to install TaskFreak! multi user
+I have fixed the installer to work with MySQL 5.5 by replacing the "TYPE=MyISAM" with "ENGINE=MyISAM"
