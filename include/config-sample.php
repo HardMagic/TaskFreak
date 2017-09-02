@@ -11,9 +11,9 @@
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 define('TZN_DB_HOST','localhost');
-define('TZN_DB_USER','cl46-tasks');       // edit here
-define('TZN_DB_PASS','7WryXBwK^');           // edit here
-define('TZN_DB_BASE','cl46-tasks');  // edit here
+define('TZN_DB_USER','');       // edit here
+define('TZN_DB_PASS','');           // edit here
+define('TZN_DB_BASE','');  // edit here
 define('TZN_DB_PREFIX','frk');
 define('TZN_DB_CLASS','tzn_mysql.php');
 
