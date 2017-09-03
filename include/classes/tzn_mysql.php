@@ -112,7 +112,7 @@ class TznDbConnection {
       			}
                return false;
       		}
-      		if (!mysqli_select_db($this->_dbBase,$this->_dbLink)) {
+      		if (!mysqli_select_db($this->_dbLink,$this->_dbBase)) {
                if (!$this->_critical) {
                    $this->_error['db'] = mysqli_connect_error();
                } else if (defined("TZN_DB_ERROR_PAGE") && 
