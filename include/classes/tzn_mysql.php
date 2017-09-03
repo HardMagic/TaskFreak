@@ -153,12 +153,12 @@ class TznDbConnection {
 	}
 
     function querySelect($qry) {
-		return new TznDbResult($qry,mysqli_query($qry,$this->_dbLink),$this->_critical);
+		return new TznDbResult($qry,$this->_dbLink->query($qry),$this->_critical);
 	}
 
 	function queryAffect($qry) {
 		if ($this->isConnected()) {
-			mysqli_query($qry,$this->_dbLink);
+			$this->_dbLink->query($qry);
 			if (($affected_row = mysqli_affected_rows($this->_dbLink)) == -1) {
 				switch(TZN_DB_DEBUG) {
 				case 3:
@@ -213,7 +213,7 @@ class TznDbResult {
         		echo "<code>".htmlspecialchars($qry)."</code><br/>";
         	}
             $this->_dbResult = $result;
-            $this->_count = mysqli_num_rows($result);
+            $this->_count = $result->num_rows;
             $this->_idx = 0;
 			return $this->_count;
         } else {
