@@ -141,14 +141,16 @@ class TznDbConnection {
 
     function getTables() {
 
-  $arrTables = array();
-  $result = mysqli_query($this->_dbLink,"SHOW TABLES");
-  while($Row = mysqli_fetch_array($result))
-  {
-    $arrTables[] = $Row[0];
-  }
-  return $arrTables;
-}
+  	$arrTables = array();
+  	if($result = mysqli_query($this->_dbLink,"SHOW TABLES")){
+  		while($row = mysqli_fetch_array($result))
+  		{
+  	  		$arrTables[] = $row[0];
+  		}
+  		return $arrTables;
+	}
+	return false;
+	}
 
     function querySelect($qry) {
 		return new TznDbResult($qry,mysqli_query($qry,$this->_dbLink),$this->_critical);
