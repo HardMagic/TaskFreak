@@ -520,7 +520,7 @@ class TznDb extends Tzn {
 			echo "<code>".$qry."</code><br/>";
 		}
 		if (is_object($this->_dbConnection)) {
-			if (ereg("^(SELECT|SHOW)",ltrim($qry))) {
+			if (preg_match("/^(SELECT|SHOW)/",ltrim($qry))) {
 				return $this->_dbConnection->querySelect($qry);
 			} else {
 				return $this->_dbConnection->queryAffect($qry);
@@ -550,7 +550,7 @@ class TznDb extends Tzn {
     }
     
     function addOrder($data,$default = '') {
-    	if ((!ereg('^[a-zA-Z0-9_\-\., ]+$',$data)) || (empty($data))) {
+    	if ((!preg_match('/^[a-zA-Z0-9_\-\., ]+$/',$data)) || (empty($data))) {
     		$data = $default;
     	}
     	$this->_sqlOrder = $this->concatSQL($this->_sqlOrder, $data,',');
@@ -623,9 +623,9 @@ class TznDb extends Tzn {
 			$sqlFrom =" FROM ".$this->gTable();
 			$groupBy = false;
 			foreach($this->_properties as $oKey => $oType) {
-				if (ereg("Last$",$oKey)) {
+				if (preg_match("/Last$/",$oKey)) {
 					continue;
-				} else if (ereg("Count$",$oKey)) {
+				} else if (preg_match("/Count$/",$oKey)) {
 					// -TODO- use var type instead of suffix
 					// -TODO- retreive table name
 					$tmpKey = substr($oKey,0,-5);
@@ -644,8 +644,8 @@ class TznDb extends Tzn {
 						.$this->gTable().".".$tmpOnKey;
 					forEach($tmpObj->_properties as $keyNested => $typeNested) 
                     {
-                        if ((ereg('^UID',$typeNested))
-							|| (ereg('(Count|Last)$',$keyNested)))
+                        if ((preg_match('/^UID/',$typeNested))
+							|| (preg_match('/(Count|Last)$/',$keyNested)))
 						{
                             continue;
                         } else if ($typeNested == 'OBJ') {
@@ -706,7 +706,7 @@ class TznDb extends Tzn {
             $sqlFrom =" FROM ".$this->gTable();
             $groupBy = false;
             foreach($this->_properties as $key => $type) {
-				if (ereg("(Last|Count)$",$key)) {
+				if (preg_match("/(Last|Count)$/",$key)) {
                     $tmpKey = strtolower(substr($key,0,-5));
                     $sqlFrom .= " LEFT JOIN ".$tmpKey." ON ".$tmpKey."."
                     	.$this->getIdKey()."="
@@ -760,7 +760,7 @@ class TznDb extends Tzn {
             $sqlFrom =' FROM '.$this->gTable();
             $groupBy = false;
             foreach($this->_properties as $key => $type) {
-				if (ereg('Count$',$key)) {
+				if (preg_match('/Count$/',$key)) {
 					// -TODO- use param type instead of suffix
                     $tmpKey = substr($key,0,-5);
                     $sqlSelect .= ', COUNT('.strtolower($tmpKey).'.'.$tmpKey.'Id) as '
@@ -769,7 +769,7 @@ class TznDb extends Tzn {
                     	.' ON '.strtolower($tmpKey).'.'.$this->getIdKey().'='
                     	.$this->gTable().'.'.$this->getIdKey();
                     $groupBy = true;
-                } else if (ereg('^OBJ',$type)) {
+                } else if (preg_match('/^OBJ/',$type)) {
 					$pObj = $key;
 					if (strlen($type) > 3) {
 						$pObj = substr($type,4);
@@ -784,8 +784,8 @@ class TznDb extends Tzn {
 						.$this->gTable().'.'.$key.'Id';
                     forEach($tmpObj->_properties as $keyNested => $typeNested) 
                     {
-                        if ((ereg('^UID',$typeNested))
-							|| (ereg('(Count|Last)$',$keyNested)))
+                        if ((preg_match('/^UID/',$typeNested))
+							|| (preg_match('/(Count|Last)$/',$keyNested)))
 						{
                             continue;
                         } else if ($typeNested == 'OBJ') {
@@ -1083,7 +1083,7 @@ class TznDb extends Tzn {
         $first = true;
 
         foreach ($this->_properties as $key => $type) {
-            if ($key == "id" || ereg("(Count|Last)$",$key)) {
+            if ($key == "id" || preg_match("/(Count|Last)$/",$key)) {
                 continue;
             } 
             $value = $this->$key;
@@ -1130,7 +1130,7 @@ class TznDb extends Tzn {
 			} else {
 				$str = '\''.$value->id.'\'';
 			}
-		} else if (ereg("^(ENCODE|ENCRYPT|MD5|NOW)\(.*\)", $value)) {
+		} else if (preg_match("/^(ENCODE|ENCRYPT|MD5|NOW)\(.*\)/", $value)) {
             $str = $value;
         } else {
             $str = "'".addslashes($value)."'";
@@ -1153,7 +1153,7 @@ class TznDb extends Tzn {
     	$imgDesc = TZN_DB_DESC_OFF, $imgDescActive = TZN_DB_DESC_ON) 
     {
 		$begin = '<a href="'.$link;
-		if (ereg('\?',$link)) {
+		if (preg_match('/\?/',$link)) {
 			$begin .= '&';
 		} else {
 			$begin .= '?';
@@ -1162,13 +1162,13 @@ class TznDb extends Tzn {
 		$end = '"';
 		$end .= Tzn::_style($style);
 		$end .= '>';
-		if (ereg('^'.$field.' ASC',$this->_sqlOrder)) {
+		if (preg_match('/^'.$field.' ASC/',$this->_sqlOrder)) {
             print '<img src="'.$imgAscActive.'">';
 		} else {
             print $begin.$field.'+ASC'.$end.'<img src="'.$imgAsc
             	.'" border="0"></a>';
 		}
-        if (ereg('^'.$field.' DESC',$this->_sqlOrder)) {
+        if (preg_match('/^'.$field.' DESC/',$this->_sqlOrder)) {
 			print '<img src="'.$imgDescActive.'">';
 		} else {
 			print $begin.$field.'+DESC'.$end.'<img src="'.$imgDesc
@@ -1196,7 +1196,7 @@ class TznDb extends Tzn {
 			return false;
 		} else {
 			$begin = '<a href="'.$link;
-			if (ereg('\?',$link)) {
+			if (preg_match('/\?/',$link)) {
 				$begin .= '&';
 			} else {
 				$begin .= '?';
@@ -1239,7 +1239,7 @@ class TznDb extends Tzn {
 		if ($max == 0) {
 			return false;
 		} 
-		if (ereg('\?',$link)) {
+		if (preg_match('/\?/',$link)) {
 		  $link .= '&';
 		} else {
 		  $link .= '?';
@@ -1284,7 +1284,7 @@ class TznDb extends Tzn {
 			return false;
 		} else {
 			$begin = '<a href="'.$link;
-			if (ereg('\?',$link)) {
+			if (preg_match('/\?/',$link)) {
 				$begin .= '&';
 			} else {
 				$begin .= '?';
@@ -1327,7 +1327,7 @@ class TznDb extends Tzn {
 			return false;
 		} else {
 			$begin = '<a href="'.$link;
-			if (ereg('\?',$link)) {
+			if (preg_match('/\?/',$link)) {
 				$begin .= '&';
 			} else {
 				$begin .= '?';

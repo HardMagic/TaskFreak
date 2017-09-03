@@ -727,7 +727,7 @@ class Tzn {
     }
 	
 	function getReg($value,$regexp) {
-		if (ereg($regexp,$value)) {
+		if (preg_match('/'.$regexp.'/',$value)) {
 			return $value;
 		} else {
 			return false;
@@ -735,7 +735,7 @@ class Tzn {
 	}
 	
 	function setReg($key, $value, $regexp) {
-		if (ereg($regexp,$value)) {
+		if (preg_match('/'.$regexp.'/',$value)) {
 			$this->$key = $value;
 			return true;
 		} else {

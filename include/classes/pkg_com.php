@@ -214,7 +214,7 @@ class EmailMessage extends TznDB {
             $str = "<table cellpadding=3 cellspacing=0 border=1>";
         }
 		foreach($objData as $key => $value) {
-			if (ereg('^_',$key)) {
+			if (preg_match('/^_/',$key)) {
 				continue;
 			}
 			if ($value && preg_match("/(%0A|%0D|\n+|\r+)(content-type:|to:|cc:|bcc:)/i",$value)) {

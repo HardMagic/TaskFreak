@@ -209,7 +209,7 @@ class ItemStats extends Item
 	}
 
     function getDeadline($short=false) {
-        if (ereg('(9999|0000)',$this->deadlineDate)) {
+        if (preg_match('/(9999|0000)/',$this->deadlineDate)) {
 			return '-';
 		} else {
 			$dead = strtotime($this->deadlineDate);
