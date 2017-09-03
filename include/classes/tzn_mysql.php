@@ -90,10 +90,10 @@ class TznDbConnection {
 	function connect() {
 		if (!$this->_dbLink) {
 			if (@constant('TZN_DB_PERMANENT')) {
-				$this->_dbLink = @mysql_pconnect($this->_dbHost,$this->_dbUser
+				$this->_dbLink = @mysqli_connect($this->_dbHost,$this->_dbUser
 					,$this->_dbPass);
 			} else {
-				$this->_dbLink = @mysql_connect($this->_dbHost,$this->_dbUser
+				$this->_dbLink = @mysqli_connect($this->_dbHost,$this->_dbUser
 					,$this->_dbPass);
 			}
 			if (!$this->_dbLink) {
