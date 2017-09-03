@@ -281,7 +281,7 @@ case 1:
 					continue;
 				}
 				if ($objDb->queryAffect(trim($sql))) {
-					if (preg_match('/^CREATE/',$sql)) {
+					if (preg_match('/^CREATE/i',$sql)) {
 						echo '<span class="ok">created!</span>';
 						$i = 0;
 					} else {
@@ -291,7 +291,7 @@ case 1:
 						}
 						echo '.';
 					}
-				} else if (preg_match('/^CREATE/',$sql)) {
+				} else if (preg_match('/^CREATE/i',$sql)) {
 					echo '<span class="error">can not create table</span>';
 					$pCheckProblem = true;
 				} else {
