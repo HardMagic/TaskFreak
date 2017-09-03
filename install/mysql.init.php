@@ -18,7 +18,7 @@ CREATE TABLE `{$dbPrefix}country` (
   `countryId` char(2) NOT NULL default '',
   `name` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`countryId`)
-) ENGINE=INNODB;
+) ENGINE=InnoDB;
 INSERT INTO `{$dbPrefix}country` VALUES ('AF', 'Afghanistan');
 INSERT INTO `{$dbPrefix}country` VALUES ('AL', 'Albania');
 INSERT INTO `{$dbPrefix}country` VALUES ('DZ', 'Algeria');
