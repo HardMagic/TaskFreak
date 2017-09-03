@@ -91,42 +91,42 @@ class TznDbConnection {
 	function connect() {
 		if (!$this->_dbLink) {
 			if (@constant('TZN_DB_PERMANENT')) {
-				$this->_dbLink = new mysqli("p:".$this->_dbHost,$this->_dbUser
+				$this->_dbLink = new mysqli('p:'.$this->_dbHost,$this->_dbUser
 					,$this->_dbPass,$this->_dbBase);
 			} else {
-				$this->_dbLink = new mysqli("p:".$this->_dbHost,$this->_dbUser
+				$this->_dbLink = new mysqli('p:'.$this->_dbHost,$this->_dbUser
 					,$this->_dbPass, $this->_dbBase);
 			}
-#			if (!$this->_dbLink) {
-#                if (!$this->_critical) {
-#                    $this->_error['db'] = @mysqli_connect_error();
-#                } else if (defined("TZN_DB_ERROR_PAGE") && 
-#					(constant("TZN_DB_ERROR_PAGE")))
-#				{
-#                   $_REQUEST['tznMessage'] = 'Can not connect to database<br />'
-#                        .mysqli_connect_error();
-#                    include TZN_DB_ERROR_PAGE;
-#                    exit;
-#				} else {
-#					die('Cannot connect to Database');
-#				}
-#                return false;
-#			}
-#			if (!mysqli_select_db($this->_dbBase,$this->_dbLink)) {
-#                if (!$this->_critical) {
-#                    $this->_error['db'] = mysqli_connect_error();
-#                } else if (defined("TZN_DB_ERROR_PAGE") && 
-#                	(constant("TZN_DB_ERROR_PAGE")))
-#                {
-#                    $_REQUEST['tznMessage'] = 'Can not select database<br />'
-#                        .mysqli_connect_error();
-#                    include TZN_DB_ERROR_PAGE;
-#                    exit;
-#				} else {
-#					die('Database does not exist');
-#				}
-#                return false;
-#			}
+			if (!$this->_dbLink) {
+               if (!$this->_critical) {
+                   $this->_error['db'] = @mysqli_connect_error();
+               } else if (defined("TZN_DB_ERROR_PAGE") && 
+      				(constant("TZN_DB_ERROR_PAGE")))
+      			{
+                  $_REQUEST['tznMessage'] = 'Can not connect to database<br />'
+                       .mysqli_connect_error();
+                   include TZN_DB_ERROR_PAGE;
+                   exit;
+      			} else {
+      				die('Cannot connect to Database');
+      			}
+               return false;
+      		}
+      		if (!mysqli_select_db($this->_dbBase,$this->_dbLink)) {
+               if (!$this->_critical) {
+                   $this->_error['db'] = mysqli_connect_error();
+               } else if (defined("TZN_DB_ERROR_PAGE") && 
+               	(constant("TZN_DB_ERROR_PAGE")))
+               {
+                   $_REQUEST['tznMessage'] = 'Can not select database<br />'
+                       .mysqli_connect_error();
+                   include TZN_DB_ERROR_PAGE;
+                   exit;
+      			} else {
+      				die('Database does not exist');
+      			}
+               return false;
+      		}
 		}
         return true;
 	}

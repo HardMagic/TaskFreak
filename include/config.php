@@ -14,7 +14,7 @@ define('TZN_DB_HOST','localhost');
 define('TZN_DB_USER','wp_user');       // edit here
 define('TZN_DB_PASS',')NfvEd#JH$kQ7).B');           // edit here
 define('TZN_DB_BASE','wordpress');  // edit here
-define('TZN_DB_PREFIX','wp_');
+define('TZN_DB_PREFIX','frk');
 define('TZN_DB_CLASS','tzn_mysql.php');
 
 define('TZN_DB_DEBUG',2);
@@ -75,7 +75,7 @@ define('PRJ_WWW_URL','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SEL
 
 // === TASKFREAK CUSTOMIZATION ================================
 
-define('FRK_VERSION','0.6.4');
+define('FRK_VERSION','0.8.0');
 define('FRK_VERSION_RELEASE','2010-06-27');
 
 define('FRK_MYSQL_VERSION_GT_4_1',FALSE);

@@ -238,18 +238,15 @@ case 1:
 	echo '</li>';
 
 	echo '<li>MySQL version: ';
-#	$objRes = $objDb->querySelect('SELECT VERSION() AS version');
-#	while ($objData = $objRes->rNext()) {
-#		$dbVersion = $objData->version;
-#		preg_match('([0-9]+\.[0-9]+)',$dbVersion,$match);
-#		$version = floatval($match[0]);
-#		echo $dbVersion.' ';
-#		if ($version < 4.1) {
-#			echo '<span class="warning">(set FRK_MYSQL_VERSION_GT_4_1 to FALSE in config.php)</span>';
-#		} else {
-#			echo $pStrOk;
-#		}
-#	}
+	printf("%d\n", $db->server_version);
+
+	$version = $objDb->server_version;
+		echo $version; var_dump($version);
+		if ($version < 4.1) {
+			echo '<span class="warning">(set FRK_MYSQL_VERSION_GT_4_1 to FALSE in config.php)</span>';
+		} else {
+			echo $pStrOk;
+		}
 	echo '</li>';
 
     $arrTableInit = array('country','item','itemComment','itemFile','itemStatus','member','memberProject','project','projectStatus');
@@ -281,7 +278,7 @@ case 1:
 					continue;
 				}
 				if ($objDb->queryAffect(trim($sql))) {
-					if (preg_match('/^CREATE/i',$sql)) {
+					if (preg_match('/^CREATE/',$sql)) {
 						echo '<span class="ok">created!</span>';
 						$i = 0;
 					} else {
@@ -291,7 +288,7 @@ case 1:
 						}
 						echo '.';
 					}
-				} else if (preg_match('/^CREATE/i',$sql)) {
+				} else if (preg_match('/^CREATE/',$sql)) {
 					echo '<span class="error">can not create table</span>';
 					$pCheckProblem = true;
 				} else {
