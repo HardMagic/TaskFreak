@@ -70,7 +70,8 @@ class TznDbConnection {
 	var $_dbPass;
 	var $_dbBase;
 	var $_dbLink;
-    var $_critical;
+	var $_critical;
+	
 
 	function TznDbConnection($host=null, $user=null, $pass=null, $base=null) {
         if ($host && $user && $base) {
@@ -90,10 +91,10 @@ class TznDbConnection {
 	function connect() {
 		if (!$this->_dbLink) {
 			if (@constant('TZN_DB_PERMANENT')) {
-				$this->_dbLink = mysqli_connect($this->_dbHost,$this->_dbUser
+				$this->_dbLink = new mysqli($this->_dbHost,$this->_dbUser
 					,$this->_dbPass);
 			} else {
-				$this->_dbLink = mysqli_connect($this->_dbHost,$this->_dbUser
+				$this->_dbLink = new mysqli($this->_dbHost,$this->_dbUser
 					,$this->_dbPass);
 			}
 			if (!$this->_dbLink) {
@@ -127,7 +128,7 @@ class TznDbConnection {
                 return false;
 			}
 		}
-        return true;
+        return $this->_dbLink;
 	}
 
 	function isConnected() {
