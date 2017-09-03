@@ -159,7 +159,7 @@ class TznDbConnection {
 	function queryAffect($qry) {
 		if ($this->isConnected()) {
 			$this->_dbLink->query($qry);
-			if (($affected_row = mysqli_affected_rows($this->_dbLink)) == -1) {
+			if (($affected_row = $this->_dbLink->affected_rows) == -1) {
 				switch(TZN_DB_DEBUG) {
 				case 3:
                 case 2:
