@@ -91,44 +91,44 @@ class TznDbConnection {
 	function connect() {
 		if (!$this->_dbLink) {
 			if (@constant('TZN_DB_PERMANENT')) {
-				$this->_dbLink = new mysqli($this->_dbHost,$this->_dbUser
-					,$this->_dbPass);
+				$this->_dbLink = new mysqli("p:".$this->_dbHost,$this->_dbUser
+					,$this->_dbPass,$this->_dbBase);
 			} else {
-				$this->_dbLink = new mysqli($this->_dbHost,$this->_dbUser
-					,$this->_dbPass);
+				$this->_dbLink = new mysqli("p:".$this->_dbHost,$this->_dbUser
+					,$this->_dbPass, $this->_dbBase);
 			}
-			if (!$this->_dbLink) {
-                if (!$this->_critical) {
-                    $this->_error['db'] = @mysql_error();
-                } else if (defined("TZN_DB_ERROR_PAGE") && 
-					(constant("TZN_DB_ERROR_PAGE")))
-				{
-                    $_REQUEST['tznMessage'] = 'Can not connect to database<br />'
-                        .@mysql_error();
-                    include TZN_DB_ERROR_PAGE;
-                    exit;
-				} else {
-					die('Cannot connect to Database');
-				}
-                return false;
-			}
-			if (!@mysql_select_db($this->_dbBase,$this->_dbLink)) {
-                if (!$this->_critical) {
-                    $this->_error['db'] = @mysql_error();
-                } else if (defined("TZN_DB_ERROR_PAGE") && 
-                	(constant("TZN_DB_ERROR_PAGE")))
-                {
-                    $_REQUEST['tznMessage'] = 'Can not select database<br />'
-                        .@mysql_error();
-                    include TZN_DB_ERROR_PAGE;
-                    exit;
-				} else {
-					die('Database does not exist');
-				}
-                return false;
-			}
+#			if (!$this->_dbLink) {
+#                if (!$this->_critical) {
+#                    $this->_error['db'] = @mysqli_connect_error();
+#                } else if (defined("TZN_DB_ERROR_PAGE") && 
+#					(constant("TZN_DB_ERROR_PAGE")))
+#				{
+#                   $_REQUEST['tznMessage'] = 'Can not connect to database<br />'
+#                        .mysqli_connect_error();
+#                    include TZN_DB_ERROR_PAGE;
+#                    exit;
+#				} else {
+#					die('Cannot connect to Database');
+#				}
+#                return false;
+#			}
+#			if (!mysqli_select_db($this->_dbBase,$this->_dbLink)) {
+#                if (!$this->_critical) {
+#                    $this->_error['db'] = mysqli_connect_error();
+#                } else if (defined("TZN_DB_ERROR_PAGE") && 
+#                	(constant("TZN_DB_ERROR_PAGE")))
+#                {
+#                    $_REQUEST['tznMessage'] = 'Can not select database<br />'
+#                        .mysqli_connect_error();
+#                    include TZN_DB_ERROR_PAGE;
+#                    exit;
+#				} else {
+#					die('Database does not exist');
+#				}
+#                return false;
+#			}
 		}
-        return $this->_dbLink;
+        return true;
 	}
 
 	function isConnected() {
@@ -140,30 +140,30 @@ class TznDbConnection {
 	}
 
     function getTables() {
-        $arrTables = array();
-        if ($result = @mysql_query('SHOW TABLES')) {
-            while($row = mysql_fetch_row($result)) {
-                $arrTables[] = $row[0];
-            }
-            return $arrTables;
-        }
-        return false;
-    }
+
+  $arrTables = array();
+  $result = mysqli_query($this->_dbLink,"SHOW TABLES");
+  while($Row = mysqli_fetch_array($result))
+  {
+    $arrTables[] = $Row[0];
+  }
+  return $arrTables;
+}
 
     function querySelect($qry) {
-		return new TznDbResult($qry,@mysql_query($qry,$this->_dbLink),$this->_critical);
+		return new TznDbResult($qry,mysqli_query($qry,$this->_dbLink),$this->_critical);
 	}
 
 	function queryAffect($qry) {
 		if ($this->isConnected()) {
-			@mysql_query($qry,$this->_dbLink);
-			if (($affected_row = mysql_affected_rows($this->_dbLink)) == -1) {
+			mysqli_query($qry,$this->_dbLink);
+			if (($affected_row = mysqli_affected_rows($this->_dbLink)) == -1) {
 				switch(TZN_DB_DEBUG) {
 				case 3:
                 case 2:
 					$strError = '<code>'.htmlspecialchars($qry).'</code><br/>';
 				case 1:
-					$this->_error['db'] = 'Error SQL #'.mysql_errno().': '.mysql_error();
+					$this->_error['db'] = 'Error SQL #'.mysqli_errno().': '.mysqli_error();
                     $strError .= $this->_error['db'];
                 default:
                     if ($this->_critical) {
@@ -211,7 +211,7 @@ class TznDbResult {
         		echo "<code>".htmlspecialchars($qry)."</code><br/>";
         	}
             $this->_dbResult = $result;
-            $this->_count = mysql_num_rows($result);
+            $this->_count = mysqli_num_rows($result);
             $this->_idx = 0;
 			return $this->_count;
         } else {
@@ -220,7 +220,7 @@ class TznDbResult {
             case 2:
                 $strError = '<code>'.htmlspecialchars($qry).'</code><br/>';
             case 1:
-                $this->_error['db'] = 'Error SQL #'.mysql_errno().': '.mysql_error();
+                $this->_error['db'] = 'Error SQL #'.mysqli_errno().': '.mysqli_error();
                 $strError .= $this->_error['db'];
             default:
                 if ($critical) {
@@ -246,7 +246,7 @@ class TznDbResult {
     }
 
     function rNext() {
-        $row = @mysql_fetch_object($this->_dbResult);
+        $row = @mysqli_fetch_object($this->_dbResult);
         if (!$row) {
 			// $this->freeResult();
 			return false;
@@ -257,9 +257,9 @@ class TznDbResult {
 
 	function rColumns() {
 		if ($this->_count) {
-			$row = @mysql_fetch_assoc($this->_dbResult);
+			$row = @mysqli_fetch_assoc($this->_dbResult);
 			$arrCols = array_keys($row);
-			mysql_data_seek($this->_dbResult,$this->_idx);
+			mysqli_data_seek($this->_dbResult,$this->_idx);
 			return $arrCols;
 		} else {
 			return false;
@@ -268,7 +268,7 @@ class TznDbResult {
 
 	function rSkip($num = 1) {
 		$next = $this->_idx + $num;
-		if (($next < $this->_idx) && (@mysql_data_seek($this->_dbResult, $next))) 
+		if (($next < $this->_idx) && (@mysqli_data_seek($this->_dbResult, $next))) 
 		{
 			$this->_idx += $num;
 			return true;
@@ -278,7 +278,7 @@ class TznDbResult {
 	}
 
 	function rItem($num) {
-		if (($num < $this->_idx) && (@mysql_data_seek($this->_dbResult, $num))) {
+		if (($num < $this->_idx) && (@mysqli_data_seek($this->_dbResult, $num))) {
 			$this->_idx = $num;
 			return $this->rNext();
 		} else {
@@ -287,7 +287,7 @@ class TznDbResult {
 	}
 
 	function rReset() {
-		if (@mysql_data_seek($this->_dbResult, 0)) {
+		if (@mysqli_data_seek($this->_dbResult, 0)) {
 			$this->_idx = 0;
 			return true;
 		} else {
@@ -305,7 +305,7 @@ class TznDbResult {
 
     function rFree() {
 		if ($this->_dbResult) {
-			@mysql_free_result($this->_dbResult);
+			@mysqli_free_result($this->_dbResult);
           }
         $this->_idx = 0;
         $this->_count = 0;
@@ -939,7 +939,7 @@ class TznDb extends Tzn {
 		$strSql .= $this->zPropsToSql();
 		$this->getConnection();
 		if ($this->query($strSql)) {
-            $this->id = mysql_insert_id();
+            $this->id = mysqli_insert_id();
 			if (!$this->id) {
 				return true;
 			} else {
@@ -960,7 +960,7 @@ class TznDb extends Tzn {
 		$this->getConnection();
 		if ($this->query($strSql)) {
 			if (!$this->id) {
-				$this->id = mysql_insert_id();
+				$this->id = mysqli_insert_id();
 			}
 			return $this->id;
 		} else {
@@ -1134,7 +1134,7 @@ class TznDb extends Tzn {
             $str = "'".addslashes($value)."'";
             /*
             if ($this->_dbConnection->_dbLink) {
-            	$str = '\''.mysql_real_escape_string($value,$this->_dbConnection->_dbLink).'\'';
+            	$str = '\''.mysqli_real_escape_string($value,$this->_dbConnection->_dbLink).'\'';
             } else {
             	$str = "'".addslashes($value)."'";
             }

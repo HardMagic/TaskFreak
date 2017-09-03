@@ -238,18 +238,18 @@ case 1:
 	echo '</li>';
 
 	echo '<li>MySQL version: ';
-	$objRes = $objDb->querySelect('SELECT VERSION() AS version');
-	while ($objData = $objRes->rNext()) {
-		$dbVersion = $objData->version;
-		preg_match('([0-9]+\.[0-9]+)',$dbVersion,$match);
-		$version = floatval($match[0]);
-		echo $dbVersion.' ';
-		if ($version < 4.1) {
-			echo '<span class="warning">(set FRK_MYSQL_VERSION_GT_4_1 to FALSE in config.php)</span>';
-		} else {
-			echo $pStrOk;
-		}
-	}
+#	$objRes = $objDb->querySelect('SELECT VERSION() AS version');
+#	while ($objData = $objRes->rNext()) {
+#		$dbVersion = $objData->version;
+#		preg_match('([0-9]+\.[0-9]+)',$dbVersion,$match);
+#		$version = floatval($match[0]);
+#		echo $dbVersion.' ';
+#		if ($version < 4.1) {
+#			echo '<span class="warning">(set FRK_MYSQL_VERSION_GT_4_1 to FALSE in config.php)</span>';
+#		} else {
+#			echo $pStrOk;
+#		}
+#	}
 	echo '</li>';
 
     $arrTableInit = array('country','item','itemComment','itemFile','itemStatus','member','memberProject','project','projectStatus');
