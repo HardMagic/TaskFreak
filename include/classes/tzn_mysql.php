@@ -141,8 +141,9 @@ class TznDbConnection {
 
     function getTables() {
 
-  	$arrTables = array();
-  	if($result = mysqli_query($this->_dbLink,"SHOW TABLES")){
+  	$mysqli = $this->_dbLink;
+	$arrTables = array();
+  	if($result = $mysqli->query("SHOW TABLES")){
   		while($row = mysqli_fetch_array($result))
   		{
   	  		$arrTables[] = $row[0];
