@@ -78,7 +78,7 @@ define('PRJ_WWW_URL','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SEL
 define('FRK_VERSION','0.8.0');
 define('FRK_VERSION_RELEASE','2010-06-27');
 
-define('FRK_MYSQL_VERSION_GT_4_1',FALSE);
+define('FRK_MYSQL_VERSION_GT_4_1',TRUE);
 
 // number of priority levels
 define('FRK_PRIORITY_LEVELS',9);	// 3, 5 or 9
