@@ -174,7 +174,7 @@ class Item extends TznDb
 					.' AS mp ON ii.projectId = mp.projectId AND mp.memberId='.$userId;
 			}
 			$sql .= ' LEFT JOIN '.$this->gTable('member').' AS mm ON ii.memberId = mm.memberId ';
-			$this->addGroup('ii.itemId');
+			$this->addGroup('ii.itemId, iis.statusDate, iis.statusKey');
 			if (@constant('FRK_MYSQL_VERSION_GT_4_1')) {
 				$this->addWhere('iis.statusDate=(SELECT MAX(iis2.statusDate) FROM '.$this->gTable('itemStatus')
 					.' AS iis2 WHERE ii.itemId = iis2.itemId)');
@@ -344,7 +344,7 @@ class ItemStats extends Item
                 .'LEFT JOIN '.$this->gTable('itemComment').' AS iic ON ii.itemId=iic.itemId '
                 .'LEFT JOIN '.$this->gTable('itemFile').' AS iif ON ii.itemId=iif.itemId '
                 .'WHERE iis.statusDate=(SELECT MAX(iis2.statusDate) FROM '.$this->gTable('itemStatus')
-                .' AS iis2 WHERE ii.itemId = iis2.itemId) AND ii.itemId = '.$this->id.' GROUP BY ii.itemId, iic.postDate, iis.statusDate, iis.statusKey, pp.name, mm.title,  mm.firstName, mm.middleName,  mm.lastName, mm.username, mp.position ';
+                .' AS iis2 WHERE ii.itemId = iis2.itemId) AND ii.itemId = '.$this->id.' GROUP BY ii.itemId, iif.postDate, iic.postDate, iis.statusDate, iis.statusKey';
         } else {
             $sql = 'SELECT ii.*, count(iic.postDate) as itemCommentCount, count(iif.postDate) as itemFileCount, '
                 .'SUBSTRING(MAX(CONCAT(iis.statusDate,iis.statusKey)),1,19) AS itemStatus_statusDate, '
@@ -359,7 +359,7 @@ class ItemStats extends Item
                 .' LEFT JOIN '.$this->gTable('member').' AS mm ON ii.memberId = mm.memberId '
                 .'LEFT JOIN '.$this->gTable('itemComment').' AS iic ON ii.itemId=iic.itemId '
                 .'LEFT JOIN '.$this->gTable('itemFile').' AS iif ON ii.itemId=iif.itemId '
-                .'WHERE ii.itemId = '.$this->id.' GROUP BY ii.itemId, iic.postDate, iis.statusDate, iis.statusKey, pp.name, mm.title,  mm.firstName, mm.middleName,  mm.lastName, mm.username, mp.position ';
+                .'WHERE ii.itemId = '.$this->id.' GROUP BY ii.itemId, iif.postDate, iic.postDate, iis.statusDate, iis.statusKey';
         }
 		$this->getConnection();
 		if ($result = $this->query($sql)) {
@@ -408,7 +408,7 @@ class ItemStats extends Item
         $sql .= ' LEFT JOIN '.$this->gTable('member').' AS mm ON ii.memberId = mm.memberId '
             .'LEFT JOIN '.$this->gTable('itemComment').' AS iic ON ii.itemId=iic.itemId '
 			.'LEFT JOIN '.$this->gTable('itemFile').' AS iif ON ii.itemId=iif.itemId ';
-		$this->addGroup('ii.itemId');
+		$this->addGroup('ii.itemId, iic.postDate, iif.postDate, iis.statusDate, iis.statusKey');
         if (@constant('FRK_MYSQL_VERSION_GT_4_1')) {
             $this->addWhere('iis.statusDate=(SELECT MAX(iis2.statusDate) FROM '.$this->gTable('itemStatus')
                 .' AS iis2 WHERE ii.itemId = iis2.itemId)');
