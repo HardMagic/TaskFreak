@@ -559,7 +559,7 @@ class Tzn {
 			$value = $dt;
 		}
 		if (!$value) {
-			return '0000-00-00';
+			return '1000-01-01';
 		}
 		$tz = $this->_getUserTZ($tz);
 		$const = 'TZN_DATETIME_'.$format;

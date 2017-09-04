@@ -1120,9 +1120,9 @@ class TznDb extends Tzn {
     	 if (($type == 'INT') || ($type == 'NUM') || ($type == 'DEC') || ($type == 'BOL')) {
              $str = ($value)?$value:0;
     	 } else if ($type == 'DTE') {
-    	 	$str = '\''.(($value)?$value:'0000-00-00').'\'';
+    	 	$str = '\''.(($value)?$value:'1000-01-01').'\'';
     	 } else if ($type == 'DTM') {
-    	 	$str = '\''.(($value)?$value:'0000-00-00 00:00:00').'\'';
+    	 	$str = '\''.(($value)?$value:'1000-01-01 00:00:00').'\'';
          } else if (is_object($value)) {
 			if (is_a($value, 'TznFile')) {
 				$value->save();
