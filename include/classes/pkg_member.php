@@ -264,7 +264,7 @@ class ProjectStats extends Project
                 .'SUBSTRING(MAX(CONCAT(ps.statusDate,ps.statusKey)),20) AS projectStatus_statusKey '
                 .$sqlCommon;
         }
-        $this->addGroup('ps.projectId');
+        $this->addGroup('ps.projectId, ps.statusKey, p1.position, ps.statusDate');
 
 		return parent::loadList($sqlCount,$sqlSelect);
 	}
@@ -309,7 +309,7 @@ class ProjectStatsFull extends ProjectStats
                 .'SUBSTRING(MAX(CONCAT(ps.statusDate,ps.statusKey)),20) AS projectStatus_statusKey '
                 .$sqlCommon;
         }
-        $this->addGroup('ps.projectId');
+        $this->addGroup('ps.projectId, ps.statusKey, p1.position, ps.statusDate');
 
 		return Project::loadList($sqlCount,$sqlSelect);
 	}
