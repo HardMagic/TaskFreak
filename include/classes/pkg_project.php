@@ -344,7 +344,7 @@ class ItemStats extends Item
                 .'LEFT JOIN '.$this->gTable('itemComment').' AS iic ON ii.itemId=iic.itemId '
                 .'LEFT JOIN '.$this->gTable('itemFile').' AS iif ON ii.itemId=iif.itemId '
                 .'WHERE iis.statusDate=(SELECT MAX(iis2.statusDate) FROM '.$this->gTable('itemStatus')
-                .' AS iis2 WHERE ii.itemId = iis2.itemId) AND ii.itemId = '.$this->id.' GROUP BY ii.itemId';
+                .' AS iis2 WHERE ii.itemId = iis2.itemId) AND ii.itemId = '.$this->id.' GROUP BY ii.itemId, iic.postDate, iis.statusDate, iis.statusKey, pp.name, mm.title,  mm.firstName, mm.middleName,  mm.lastName, mm.username, mp.position ';
         } else {
             $sql = 'SELECT ii.*, count(iic.postDate) as itemCommentCount, count(iif.postDate) as itemFileCount, '
                 .'SUBSTRING(MAX(CONCAT(iis.statusDate,iis.statusKey)),1,19) AS itemStatus_statusDate, '
@@ -359,7 +359,7 @@ class ItemStats extends Item
                 .' LEFT JOIN '.$this->gTable('member').' AS mm ON ii.memberId = mm.memberId '
                 .'LEFT JOIN '.$this->gTable('itemComment').' AS iic ON ii.itemId=iic.itemId '
                 .'LEFT JOIN '.$this->gTable('itemFile').' AS iif ON ii.itemId=iif.itemId '
-                .'WHERE ii.itemId = '.$this->id.' GROUP BY ii.itemId';
+                .'WHERE ii.itemId = '.$this->id.' GROUP BY ii.itemId, iic.postDate, iis.statusDate, iis.statusKey, pp.name, mm.title,  mm.firstName, mm.middleName,  mm.lastName, mm.username, mp.position ';
         }
 		$this->getConnection();
 		if ($result = $this->query($sql)) {
