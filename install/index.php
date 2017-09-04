@@ -238,10 +238,9 @@ case 1:
 	echo '</li>';
 
 	echo '<li>MySQL version: ';
-	printf("%d\n", $db->server_version);
+	printf("%d\n", $objDb->server_version);
 
 	$version = $objDb->server_version;
-		echo $version; var_dump($version);
 		if ($version < 4.1) {
 			echo '<span class="warning">(set FRK_MYSQL_VERSION_GT_4_1 to FALSE in config.php)</span>';
 		} else {
@@ -277,7 +276,7 @@ case 1:
 				if (!trim($sql)) {
 					continue;
 				}
-				if ($objDb->queryAffect(trim($sql))) {
+				if ($objDb->queryAffect($objDb->real_escape_string($sql))) {
 					if (preg_match('/^CREATE/',$sql)) {
 						echo '<span class="ok">created!</span>';
 						$i = 0;
