@@ -127,7 +127,7 @@ switch ($pShow) {
 			.strftime(TZN_DATE_SQL,PRJ_DTE_NOW).'\' AND statusKey < '
 			.FRK_STATUS_LEVELS.')'.' OR statusKey < '.FRK_STATUS_LEVELS.')';
         // show uncompleted tasks with no deadline
-		$sqlFilter .= ' OR (deadlineDate = \'9999-00-00\' AND statusKey < '
+		$sqlFilter .= ' OR (deadlineDate = \'9999-12-31\' AND statusKey < '
 			.FRK_STATUS_LEVELS.')';
 		break;
 	case 'past':
