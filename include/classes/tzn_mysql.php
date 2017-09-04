@@ -158,6 +158,7 @@ class TznDbConnection {
 
 	function queryAffect($qry) {
 		if ($this->isConnected()) {
+		$qry =	$this->_dbLink->real_escape_string($qry);
 			$this->_dbLink->query($qry);
 			if (($affected_row = $this->_dbLink->affected_rows) == -1) {
 				switch(TZN_DB_DEBUG) {
