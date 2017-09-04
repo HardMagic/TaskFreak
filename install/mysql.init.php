@@ -279,9 +279,9 @@ CREATE TABLE `{$dbPrefix}item` (
   KEY `projectId` (`projectId`),
   KEY `memberId` (`memberId`)
 ) ENGINE=InnoDB;
-INSERT INTO `{$dbPrefix}item` VALUES (1, 1, 0, 3, '1', 'Congratulations! This is your first task', 'First of all, read the README.txt if you haven''t done it yet.\r\n\r\nLots of informations in there.', '9999-00-00', 0, 0, 0, 1, 1);
-INSERT INTO `{$dbPrefix}item` VALUES (2, 1, 0, 5, '1', 'How to create a user', 'To create a new user, go to menu <i>manage > users</i> \r\n\r\nthen click on the <img src="skins/redfreak/images/b_new.png" /> button.', '9999-00-00', 0, 0, 2, 1, 1);
-INSERT INTO `{$dbPrefix}item` VALUES (3, 1, 0, 7, '4', 'Send some feedback', 'To send some feedback to the author, go to\r\n<a href="http://forum.taskfreak.com" target="_blank">http://forum.taskfreak.com</a>\r\n\r\nPlease remember you can donate by paypal on\r\n<a href="http://www.taskfreak.com" target="_blank">http://www.taskfreak.com</a>', '9999-00-00', 0, 0, 1, 1, 1);
+INSERT INTO `{$dbPrefix}item` VALUES (1, 1, 0, 3, '1', 'Congratulations! This is your first task', 'First of all, read the README.txt if you haven''t done it yet.\r\n\r\nLots of informations in there.', '9999-12-31', 0, 0, 0, 1, 1);
+INSERT INTO `{$dbPrefix}item` VALUES (2, 1, 0, 5, '1', 'How to create a user', 'To create a new user, go to menu <i>manage > users</i> \r\n\r\nthen click on the <img src="skins/redfreak/images/b_new.png" /> button.', '9999-12-31', 0, 0, 2, 1, 1);
+INSERT INTO `{$dbPrefix}item` VALUES (3, 1, 0, 7, '4', 'Send some feedback', 'To send some feedback to the author, go to\r\n<a href="http://forum.taskfreak.com" target="_blank">http://forum.taskfreak.com</a>\r\n\r\nPlease remember you can donate by paypal on\r\n<a href="http://www.taskfreak.com" target="_blank">http://www.taskfreak.com</a>', '9999-12-31', 0, 0, 1, 1, 1);
 EOSQL;
 
 $sqlItemComment = <<< EOSQL
