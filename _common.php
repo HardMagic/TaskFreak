@@ -84,7 +84,6 @@ if ($pUserIsLogged) {
     // $objUserProjectList->addWhere('ps.statusKey < 40');
     $objUserProjectList->addHaving('projectStatus_statusKey < 40');
     $objUserProjectList->loadList($objUser->id,(!$objUser->checkLevel(6)));
-echo 1;exit();
 	
 	// decide which is current project
 	
