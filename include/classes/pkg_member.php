@@ -256,7 +256,7 @@ class ProjectStats extends Project
             $sqlSelect = 'SELECT pp.*, ps.statusKey AS projectStatus_statusKey, '
                 .'p1.position AS memberProject_position, ps.statusDate as projectStatus_statusDate '.$sqlCommon;
             $this->addWhere('ps.statusDate=(SELECT MAX(ps2.statusDate) FROM '.$this->gTable('projectStatus')
-				.' AS ps2 WHERE pp.projectId = ps2.projectId GROUP BY p1.memberId');
+                .' AS ps2 WHERE pp.projectId = ps2.projectId)');
         } else {
             $sqlCount = 'SELECT COUNT(DISTINCT pp.projectId) as rowCount '.$sqlCommon;
             $sqlSelect = 'SELECT pp.*, p1.position AS memberProject_position, '
