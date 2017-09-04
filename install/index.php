@@ -276,7 +276,7 @@ case 1:
 				if (!trim($sql)) {
 					continue;
 				}
-				if ($objDb->queryAffect($objDb->real_escape_string($sql))) {
+				if ($objDb->queryAffect(trim($sql))) {
 					if (preg_match('/^CREATE/',$sql)) {
 						echo '<span class="ok">created!</span>';
 						$i = 0;
