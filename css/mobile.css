@@ -1,0 +1,2054 @@
+/********************************************************************************************
+ 1. STYLES FOR MOBILE DEVICES - media screen max width: 400px (line 15)
+ 2. STYLES FOR MOBILE DEVICES - media screen min width: 400px / max width: 568px (line 254)
+ 3. STYLES FOR MOBILE DEVICES - media screen min width: 568px / max width: 600px (line 504)
+ 4. STYLES FOR MOBILE DEVICES - media screen min width: 600px / max width: 700px (line 771)
+ 5. STYLES FOR MOBILE DEVICES - media screen min width: 700px / max width: 1024px (line 1031)
+ 6. STYLES FOR MOBILE DEVICES - media screen min width: 1024px / max width: 1280px (line 1241)
+ 7. STYLES FOR MOBILE DEVICES - media screen min width: 1280px / max width: 1366px (line 1455)
+ 8. STYLES FOR MOBILE DEVICES - media screen min width: 1336px / max width: 1536px (line 1639)
+ 9. STYLES FOR MOBILE DEVICES - media screen min width: 1536px / max width: 1680px (line 1862)
+ 10.STYLES FOR MOBILE DEVICES - width: 1680px (line 2043)
+*********************************************************************************************/
+
+
+
+/* -- 1. STYLES FOR MOBILE DEVICES - media screen max width: 400px -- */
+
+@media only screen and (max-width: 400px) {
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 1.5px;
+		line-height: 40%;
+	}
+	
+	#wrapper {
+		overflow-x: hidden;	
+	}	
+	
+	.container {
+		overflow-x: hidden;
+	}
+	
+	.navbar-brand {
+		padding: 0;
+	}
+	
+	.nav > li {
+		background: #FFF;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 5px 20px;
+		margin: 0 auto;
+
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.dropdown-menu {
+		padding: 0 20px;
+	}
+	
+	.navbar-nav .open .dropdown-menu {
+		background: #FFF;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+		padding: 0 20px;
+		background: #FFF;
+	}
+	
+	.navbar-toggle {
+		position: absolute;
+		right: 2px;
+		top: 14px;
+	}
+	
+	.navbar-nav {
+		margin: 0 -15px;
+	}
+
+	.dot-intro {
+		margin: -40px 0 0 40%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 15% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+		overflow-x: hidden;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 16% 0;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin-right: 0;
+	}
+	
+	.white-iphone {
+		background-image: none !important;
+	}
+	
+	#overview {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+	
+	#features {
+		padding: 30% 0;
+		height: auto;
+	}
+	
+	.dot-features {
+		margin: -125px 0 0 40%;
+	}
+	
+	.screen1 {
+		right: 8%;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 26%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -80px;
+	}
+	
+	.fa-icon-wrap {
+		display: none;
+	}	
+	
+	.text-features {
+		margin: 180% 0 0 0;
+	}
+	
+	.text-features h3 {
+		font-size: 1.6em;
+		line-height: 100%;
+		margin: 12% 0 -2% 7%;
+	}
+	
+	#screens {
+		padding: 20% 0;
+		height: auto;
+		min-height: 100%;
+	}
+	
+	.dot-screens {
+		margin: -95px 0 0 40%;
+	}
+	
+	.view {
+		margin: 2% 4%;
+	}
+	
+	#testimonials {
+		padding: 25% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -110px 0 0 40%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: left;
+		margin-left: 35%;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: right; 
+		margin-left: 10%;
+	}
+	
+	#plans {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -95px 0 0 40%;
+	}
+	
+	.pricing_table ul { 
+		width: 100%; 
+		margin: 8% auto;
+	}
+	
+	#contact {
+		padding: 20% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-contact {
+		margin: -95px 0 0 40%;
+	}
+	
+	.contact-map {
+		margin: 10% auto;
+	}
+	
+	.copyright {
+		padding: 10px 0 20px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+/* -- 2. STYLES FOR MOBILE DEVICES - media screen min width: 400px / max width: 568px -- */
+
+@media screen and (min-width: 400px) and (max-width: 568px) {	
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.2em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 32px;
+		line-height: 40%;
+	}
+
+	h4 {
+		font-size: 28px;
+	}
+
+	h5 {
+		font-size: 18px;
+	}
+	
+	#wrapper {
+		overflow-x: hidden;	
+	}	
+	
+	.content{
+		overflow-x: hidden;
+	}
+	
+	.navbar-brand {
+		padding: 0 5px;
+	}
+	
+	.nav > li {
+		background: #FFF;
+	}
+	
+	.navbar-default {
+		height: 85px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 5px 20px;
+		margin: 0 auto;
+
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.dropdown-menu {
+		padding: 0 20px;
+	}
+	
+	.navbar-nav .open .dropdown-menu {
+		background: #FFF;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+		padding: 0 20px;
+		background: #FFF;
+	}
+	
+	.navbar-toggle {
+		position: absolute;
+		right: 2px;
+		top: 14px;
+	}
+	
+	.navbar-nav {
+		margin: 0 -15px;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 43.5%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 15% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 12% 0;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin-right: 0;
+	}
+	
+	.white-iphone {
+		background-image: none !important;
+	}
+	
+	#overview {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+		
+	#features {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-features {
+		margin: -125px 0 0 43%;
+	}
+	
+	.screen1 {
+		right: 4%;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 26%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -80px;
+	}
+	
+	.fa-icon-wrap {
+		display: none;
+	}	
+	
+	.text-features {
+		margin: 160% 0 0 0;
+	}
+	
+	.text-features h3 {
+		font-size: 1.6em;
+		line-height: 100%;
+		margin: 12% 0 -2% 7%;
+	}
+		
+	#screens {
+		padding: 20% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -130px 0 0 43%;
+	}
+
+	.view {
+		margin: 2% 18%;
+	}
+	
+	#testimonials {
+		padding: 25% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -150px 0 0 43%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: left;
+		margin-left: 90%;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: right; 
+		margin-left: 10%;
+	}
+	
+	#plans {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -130px 0 0 43%;
+	}
+	
+	.pricing_table ul { 
+		width: 100%; 
+		margin: 8% auto;
+	}
+	
+	#contact {
+		padding: 20% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-contact {
+		margin: -130px 0 0 43%;
+	}
+	
+	.contact-map {
+		margin: 10% auto;
+	}
+	
+	.copyright {
+		padding: 10px 0 20px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}	
+}
+
+
+/* -- 3. STYLES FOR MOBILE DEVICES - media screen min width: 568px / max width: 600px -- */
+
+@media screen and (min-width: 568px) and (max-width: 600px) {	
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.2em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 32px;
+		line-height: 40%;
+	}
+
+	h4 {
+		font-size: 28px;
+	}
+
+	h5 {
+		font-size: 18px;
+	}
+	
+	#wrapper {
+		overflow-x: hidden;	
+	}	
+	
+	.content {
+		overflow-x: hidden;
+	}
+	
+	.navbar-brand {
+		padding: 0 5px;
+	}
+	
+	.nav > li {
+		background: #FFF;
+	}
+	
+	.navbar-default {
+		height: 85px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 5px 20px;
+		margin: 0 auto;
+
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.dropdown-menu {
+		padding: 0 20px;
+	}
+	
+	.navbar-nav .open .dropdown-menu {
+		background: #FFF;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+		padding: 0 20px;
+		background: #FFF;
+	}
+	
+	.navbar-toggle {
+		position: absolute;
+		right: 2px;
+		top: 14px;
+	}
+	
+	.navbar-nav {
+		margin: 0 -15px;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 43.5%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 15% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 12% 0;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin-right: 0;
+	}
+	
+	.white-iphone {
+		background-image: none !important;
+	}
+	
+	#overview {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+	
+	.dot-features {
+		margin: -145px 0 0 43.5%;
+	}
+	
+	.screen1 {
+		right: 0;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 18%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -95px;
+	}
+	
+	.fa-icon-wrap {
+		display: none;
+	}	
+	
+	.text-features {
+		margin: 130% 0 0 0;
+	}
+	
+	.text-features h3 {
+		font-size: 1.6em;
+		line-height: 100%;
+		margin: 8% 0 -2% 7%;
+	}
+	
+	#screens {
+		padding: 20% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -145px 0 0 43%;
+	}
+
+	.view {
+	    width: 250px;
+		margin: 1%;
+	}
+	
+	.view .mask,.view .content {
+	   width: 245px;
+	   height: auto;
+	}
+	
+	.view h2 {
+		font-size: 1.9em;
+	}
+	
+	.view  p {
+		font-size: 0.8em;
+	}
+	
+	.view-tenth h2 {
+	   margin: 20px 20px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 20px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -150px 0 0 43%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: left;
+		margin-left: 90%;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: right; 
+		margin-left: 10%;
+	}
+	
+	#plans {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -145px 0 0 43%;
+	}
+	
+	.pricing_table ul { 
+		width: 100%; 
+		margin: 8% auto;
+	}
+	
+	#contact {
+		padding: 20% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-contact {
+		margin: -145px 0 0 43%;
+	}
+	
+	.contact-map {
+		margin: 10% auto;
+	}
+	
+	.copyright {
+		padding: 10px 0 20px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+/* -- 4. STYLES FOR MOBILE DEVICES - media screen min width: 600px / max width: 700px -- */
+
+@media screen and (min-width: 600px) and (max-width: 700px) {	
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.2em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 32px;
+		line-height: 40%;
+	}
+
+	h4 {
+		font-size: 28px;
+	}
+
+	h5 {
+		font-size: 18px;
+	}
+	
+	#wrapper {
+		overflow-x: hidden;	
+	}	
+	
+	.content {
+		overflow-x: hidden;
+	}
+	
+	.navbar-brand {
+		padding: 0 5px;
+	}
+	
+	.nav > li {
+		background: #FFF;
+	}
+	
+	.navbar-default {
+		height: 85px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 5px 20px;
+		margin: 0 auto;
+
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 5px 20px;
+		margin: 0 auto;
+	}
+	
+	.dropdown-menu {
+		padding: 0 20px;
+	}
+	
+	.navbar-nav .open .dropdown-menu {
+		background: #FFF;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+		padding: 0 20px;
+		background: #FFF;
+	}
+	
+	.navbar-toggle {
+		position: absolute;
+		right: 2px;
+		top: 14px;
+	}
+	
+	.navbar-nav {
+		margin: 0 -15px;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 43.5%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 15% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 12% 0;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin-right: 0;
+	}
+	
+	.white-iphone {
+		background-image: none !important;
+	}
+	
+	#overview {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+	
+	#features {
+		padding: 20% 0;
+		height: 100%;
+	}
+	
+	.dot-features {
+		margin: -145px 0 0 43.5%;
+	}
+
+	.screen1 {
+		right: 0;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 18%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -95px;
+	}
+	
+	.fa-icon-wrap {
+		display: none;
+	}	
+	
+	.text-features {
+		margin: 130% 0 0 0;
+	}
+	
+	.text-features h3 {
+		font-size: 1.6em;
+		line-height: 100%;
+		margin: 8% 0 -2% 7%;
+	}
+	
+	#screens {
+		padding: 20% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -145px 0 0 43%;
+	}
+
+	.view {
+		margin: 2%;
+	}
+	
+	.view-tenth h2 {
+	   margin: 20px 25px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 25px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -150px 0 0 43%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: left;
+		margin-left: 30%;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: right; 
+		margin-left: 10%;
+	}
+	
+	#plans {
+		padding: 20% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -145px 0 0 43%;
+	}
+	
+	.pricing_table ul { 
+		width: 100%; 
+		margin: 4% auto;
+	}
+	
+	#contact {
+		padding: 20% 0 0 0;
+	}
+	
+	.dot-contact {
+		margin: -155px 0 0 43%;
+	}
+	
+	.contact-form {
+		padding-top: 15px;
+	}
+	
+	.contact-map {
+		margin: 5% auto;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		padding-top: 0;
+	}	
+}
+
+
+/* -- 5. STYLES FOR MOBILE DEVICES - media screen min width: 700px / max width: 1024px -- */
+
+@media screen and (min-width : 700px) and (max-width : 1024px) {
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 2.8em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+	
+	#wrapper {
+		overflow-x: hidden;	
+	}	
+	
+	.navbar-brand {
+		padding: 4px 0;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 26px 7px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 26px 7px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 26px 7px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 26px 7px;
+		margin: 0 auto;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 45.5%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 12% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 10% 0;
+	}
+
+	#overview {
+		padding: 10% 0 0 0;
+		height: auto;
+	}
+
+	.video-bg {
+		min-height: 313px;
+	}
+	
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+	
+	#features {
+		padding: 10% 0 20% 0;
+		height: 100%;
+	}
+		
+	.dot-features {
+		margin: -115px 0 0 45.5%;
+	}
+	
+	.screen1 {
+		right: 0;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 28%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -95px;
+	}
+	
+	.fa-icon-wrap {
+		display: none;
+	}	
+	
+	.text-features {
+		margin: 100% 0 0 0;
+	}
+	
+	.text-features h3 {
+		font-size: 1.6em;
+		line-height: 100%;
+		margin: 8% 0 -2% 7%;
+	}
+	
+	#screens {
+		padding: 10% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -110px 0 0 45.5%;
+	}
+
+	.view {
+		margin: 5%;
+	}
+	
+	.view-tenth h2 {
+	   margin: 40px 25px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 25px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -110px 0 0 45.5%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: left;
+		margin-left: 30%;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: right; 
+		margin-left: 10%;
+	}
+	
+	#plans {
+		padding: 10% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -110px 0 0 45.5%;
+	}
+	
+	.pricing_table ul { 
+		margin: 4% auto;
+	}
+	
+	#contact {
+		padding: 10% 0 0 0;
+	}
+	
+	.dot-contact {
+		margin: -110px 0 0 45.5%;
+	}
+	
+	.contact-form {
+		padding-top: 2%;
+		margin: 0 2%;
+		width: 46%;
+		float: left;
+	}
+	
+	.contact-map {
+		height: 435px;
+		margin: 5% auto;
+		width: 46%;
+		float: left;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		padding-top: 0;
+	}
+}
+
+
+/* -- 6. STYLES FOR MOBILE DEVICES - media screen min width: 1024px / max width: 1280px -- */
+
+@media screen and (min-width : 1024px) and (max-width : 1280px) {
+
+	body {
+		overflow-x: hidden;
+	}
+	
+	.navbar-brand {
+		padding: 4px 20px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 26px 12px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 26px 12px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 26px 12px;
+		margin: 0 auto;
+	}
+
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 26px 12px;
+		margin: 0 auto;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 47%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 8% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 8% 0;
+	}
+	
+	#overview {
+		padding: 10% 0 0 0;
+	}
+	
+	.video-bg {
+		margin: 5% auto;
+		padding-bottom: 33%;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin: 0 3%;
+	}
+
+	.fast h2, .friendly h2, .simple h2, .intuitive h2, .secure h2, .stable h2  {
+		display: none;
+	}
+
+	.arrow-fast, .arrow-friendly, .arrow-simple, .arrow-intuitive, .arrow-secure, .arrow-stable {
+		display: none;
+	}
+	
+	#features {
+		padding: 10% 0;
+		height: 100%;
+	}
+	
+	.dot-features {
+		margin: -135px 0 0 46.5%;
+	}
+	
+	.screen1 {
+		right: 0;
+	}
+
+	.screen2 {
+		margin: 50px auto;
+		right: 16%;
+	}
+
+	.screen3 {
+		margin: 95px 0 0 -95px;
+	}	
+	
+	.col-md-1 {
+		display: none;
+	}
+	
+	.text-features {
+		margin: 0 auto;
+	}
+	
+	#screens {
+		padding: 10% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -135px 0 0 46.5%;
+	}
+
+	.view {
+		margin: 0.5%;
+		width: 225px;
+	}
+	
+	.view .mask,.view .content {
+	   width: 220px;
+	   height: auto;
+	}
+	
+	.view h2 {
+		font-size: 1.6em;
+	}
+	
+	.view p {
+		font-size: 0.8em;
+	}
+	
+	.view-tenth h2 {
+	   margin: 40px 25px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 25px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -135px 0 0 46.5%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: none;
+		margin-left: 0;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: none; 
+		margin-left: 0;
+	}
+	
+	#plans {
+		padding: 10% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -135px 0 0 46.5%;
+	}
+	
+	.pricing_table  { 
+		margin: 0 auto;
+	}
+	
+	.pricing_table ul { 
+		margin: 4% 0 0 0;
+	}
+	
+	#contact {
+		padding: 10% 0 0 0;
+	}
+	
+	.dot-contact {
+		margin: -135px 0 0 46.5%;
+	}
+	
+	.contact-form {
+		padding-top: 2%;
+		margin: 0 2%;
+		float: none;
+		width: 95%;
+	}
+	
+	.contact-map {
+		margin: 5% auto;
+		float: none;
+		width: 90%;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		padding-top: 0;
+	}
+	
+}
+
+
+/* -- 7. STYLES FOR MOBILE DEVICES - media screen min width: 1280px / max width: 1366px -- */
+
+@media screen and (min-width : 1280px) and (max-width : 1366px) {
+
+	body {
+		overflow-x: hidden;
+	}
+		
+	.navbar-brand {
+		padding: 4px 20px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 26px 14px;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 47%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 8% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 6% 0;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin: 0 3%;
+	}
+	
+	.video-bg {
+		min-height: 316px;
+		padding-bottom: 28%;
+	}
+	
+	#features {
+		padding: 10% 0;
+	}
+	
+	.dot-features{
+		margin: -165px 0 0 47%;
+	}
+	
+	.col-md-1 {
+		display: block;
+	}
+	
+	.fa-icon-wrap {
+		padding: 2em 0 3em 0;
+	}
+	
+	#screens {
+		padding: 10% 0;
+	}
+
+	.dot-screens {
+		margin: -165px 0 0 47%;
+	}
+
+	.view {
+		margin: 0.5%;
+		width: 273px;
+	}
+	
+	.view .mask,.view .content {
+	   width: 263px;
+	   height: auto;
+	}
+	
+	.view h2 {
+		font-size: 1.6em;
+	}
+	
+	.view p {
+		font-size: 0.8em;
+	}
+	
+	.view-tenth h2 {
+	   margin: 40px 20px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 20px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -165px 0 0 47%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: none;
+		margin-left: 0;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: none; 
+		margin-left: 0;
+	}
+	
+	#plans {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -165px 0 0 47%;
+	}
+		
+	.pricing_table  { 
+		margin: 0 auto;
+	}
+	
+	.pricing_table ul { 
+		margin: 4% 0 0 0;
+	}
+	
+	#contact {
+		padding: 10% 0 0 0;
+	}
+	
+	.dot-contact {
+		margin: -165px 0 0 47%;
+	}
+	
+	.contact-form {
+		padding-top: 2%;
+		margin: 0 2%;
+		float: none;
+		width: 95%;
+	}
+	
+	.contact-map {
+		margin: 0 auto;
+		float: none;
+		width: 90%;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 10px 0 0 0;
+	}
+	
+	.row {
+		padding-top: 0;
+	}
+}
+
+
+/* -- 8. STYLES FOR MOBILE DEVICES - media screen min width: 1336px / max width: 1536px -- */
+
+@media screen and (min-width : 1366px) and (max-width : 1536px) {
+
+	body {
+		overflow-x: hidden;
+	}
+		
+	.navbar-brand {
+		padding: 4px 20px;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding: 26px 14px;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		padding: 2px 5px;
+		margin: 24px 9px;
+	}
+	
+	.dot-intro {
+		margin: -40px 0 0 47%;
+		text-align: center;
+	}
+
+	.headline-left-content {
+		width: 100%;
+		min-width: 280px;
+		padding: 6% 2%;
+	}
+	
+	.headline-right-content {
+		display: none;
+	}
+
+	.steps{
+		width: 100%;
+		height: auto;
+		padding: 5% 0;
+	}
+	
+	.video-bg {
+		min-height: 316px;
+	}
+	
+	.appstore-button, .playstore-button {
+		margin: 0 3%;
+	}
+	
+	.fast h2 {
+		left: 7%;
+	}
+
+	.arrow-fast {
+		left: 21%;
+		top: 16.4%;
+	}
+
+	.friendly h2 {
+		left: 0%;
+	}
+
+	.arrow-friendly {
+		left: 19%;
+		top: 19.4%;
+	}
+
+	.simple h2 {
+		left: 4%;
+	}
+
+	.arrow-simple {
+		left: 21%;
+		top: 22.2%;
+	}
+
+	.intuitive h2 {
+		left: 86%;
+	}
+
+	.arrow-intuitive {
+		left: 74.6%;
+		top: 16.4%;
+	}
+
+	.secure h2 {
+		left: 93.5%;
+	}
+
+	.arrow-secure {
+		left: 76%;
+		top: 19.4%;
+	}
+
+	.stable h2 {
+		left: 88.6%;
+	}
+
+	.arrow-stable {
+		left: 75%;
+		top: 22.2%;
+	}
+	
+	.dot-features{
+		margin: -165px 0 0 47%;
+	}
+
+	#screens {
+		padding: 10% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -165px 0 0 47%;
+	}
+
+	.view {
+		margin: 0.5%;
+		width: 273px;
+	}
+	
+	.view .mask,.view .content {
+	   width: 263px;
+	   height: auto;
+	}
+	
+	.view h2 {
+		font-size: 1.6em;
+	}
+	
+	.view p {
+		font-size: 0.8em;
+	}
+	
+	.view-tenth h2 {
+	   margin: 40px 20px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 20px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -165px 0 0 47%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: none;
+		margin-left: 0;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: none; 
+		margin-left: 0;
+	}
+	
+	#plans {
+		padding: 10% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -165px 0 0 47%;
+	}
+	
+	.pricing_table  { 
+		margin: 0 auto;
+	}
+	
+	.pricing_table ul { 
+		margin: 4% 0 0 0;
+	}
+	
+	#contact {
+		padding: 10% 0 0 0;
+	}
+	
+	.dot-contact {
+		margin: -165px 0 0 47%;
+	}
+	
+	.contact-form {
+		padding-top: 2%;
+		margin: 0 2%;
+		float: none;
+		width: 95%;
+	}
+	
+	.contact-map {
+		margin: 0 auto;
+		float: none;
+		width: 90%;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 10px 0 0 0;
+	}
+}
+
+
+/* -- 9. STYLES FOR MOBILE DEVICES - media screen min width: 1536px / max width: 1680px -- */
+
+@media screen and (min-width : 1536px) and (max-width : 1680px) {
+
+	body {
+		overflow-x: hidden;
+	}
+
+	.fast h2 {
+		left: 7%;
+	}
+
+	.arrow-fast {
+		left: 25%;
+		top: 17.8%;
+	}
+
+	.friendly h2 {
+		left: 0%;
+	}
+
+	.arrow-friendly {
+		left: 23.5%;
+		top: 20.8%;
+	}
+
+	.simple h2 {
+		left: 4%;
+	}
+
+	.arrow-simple {
+		left: 24.5%;
+		top: 23.8%;
+	}
+
+	.intuitive h2 {
+		left: 86%;
+	}
+
+	.arrow-intuitive {
+		left: 71%;
+		top: 17.8%;
+	}
+
+	.secure h2 {
+		left: 93.5%;
+	}
+
+	.arrow-secure {
+		left: 72.4%;
+		top: 20.8%;
+	}
+
+	.stable h2 {
+		left: 88.6%;
+	}
+
+	.arrow-stable {
+		left: 71.6%;
+		top: 23.8%;
+	}
+	
+	.lb-album {
+		margin: 20px 0;
+	}
+	
+	.lb-overlay > div {
+		margin: 0 160px;
+	}
+	
+	.dot-features{
+		margin: -125px 0 0 47.5%;
+	}
+
+	#screens {
+		padding: 6% 0;
+		height: auto;
+		min-height: 100%;
+	}
+
+	.dot-screens {
+		margin: -125px 0 0 47.5%;
+	}
+
+	.view {
+		margin: 0.5%;
+		width: 273px;
+	}
+	
+	.view .mask,.view .content {
+	   width: 263px;
+	   height: auto;
+	}
+	
+	.view h2 {
+		font-size: 1.6em;
+	}
+	
+	.view p {
+		font-size: 0.8em;
+	}
+	
+	.view-tenth h2 {
+	   margin: 40px 20px 0px 10px;
+	}
+	
+	.view-tenth p {
+	   margin: 10px 20px 10px 10px;
+	}
+	
+	#testimonials {
+		padding: 6% 0;
+		height: auto;
+	}
+	
+	.dot-testimonials {
+		margin: -125px 0 0 47.5%;
+	}
+	
+	.bx-wrapper {
+		margin: 25px auto;
+	}
+	
+	.bx-wrapper .testimonials-carousel-thumbnail img { 
+		height: auto;
+		float: none;
+		margin-left: 0;
+	}
+	
+	.bx-wrapper .testimonials-carousel-context { 
+		float: none; 
+		margin-left: 0;
+	}
+	
+	#plans {
+		padding: 6% 0;
+		height: auto;
+	}
+	
+	.dot-plans {
+		margin: -125px 0 0 47.5%;
+	}
+	
+	.pricing_table  { 
+		margin: 0 auto;
+	}
+	
+	.pricing_table ul { 
+		margin: 4% 0 0 0;
+	}
+	
+	#contact {
+		padding: 6% 0 0 0;
+		height: auto;
+	}
+	
+	.dot-contact {
+		margin: -125px 0 0 47.5%;
+	}
+	
+	.contact-form {
+		padding-top: 2%;
+		margin: 0 2%;
+		float: none;
+		width: 95%;
+	}
+	
+	.contact-map {
+		margin: 0 auto;
+		float: none;
+		width: 90%;
+	}
+	
+	.copyright {
+		padding: 10px 0;
+		margin: 12px 0 0 0;
+	}
+}	
+
+
+/* -- 10. STYLES FOR MOBILE DEVICES - width: 1680px -- */
+
+@media screen and (width : 1680px) {
+	
+	h1 {
+		font-size: 2.6em;
+	}
+	
+	.headline-left-content {
+		padding: 5% 0 0 17%;
+	}
+}
