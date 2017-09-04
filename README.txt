@@ -1,1 +1,0 @@
-I have fixed the installer to work with MySQL 5.5 by replacing the "TYPE=MyISAM" with "ENGINE=MyISAM"
