@@ -64,7 +64,6 @@ if (!$pPageIsPublic) {
 if ($_SESSION['tznMessage']) {
     $pMessageStatus = $_SESSION['tznMessage'];
     unset($_SESSION['tznMessage']);
-	session_unregister('tznMessage');
 }
 
 // === USER PREFERENCES =============================================
