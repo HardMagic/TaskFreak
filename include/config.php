@@ -17,10 +17,10 @@ define('TZN_DB_BASE','wordpress');  // edit here
 define('TZN_DB_PREFIX','frk');
 define('TZN_DB_CLASS','tzn_mysql.php');
 
-define('TZN_DB_DEBUG',2);
+define('TZN_DB_DEBUG',3);
 define('TZN_DB_PERMANENT',0);
 
-define('TZN_DEBUG',0);
+define('TZN_DEBUG',1);
 define('TZN_SPECIALCHARS',2);
 define('TZN_HTMLMODE','html');
 define('TZN_BOOL_TRUE','<img src="images/check_yes.png" width="12" height="13" border="0" />');
