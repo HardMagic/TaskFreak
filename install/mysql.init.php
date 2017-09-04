@@ -269,7 +269,7 @@ CREATE TABLE `{$dbPrefix}item` (
   `context` varchar(80) NOT NULL default '',
   `title` varchar(255) NOT NULL default '',
   `description` text NOT NULL,
-  `deadlineDate` date NOT NULL default '0000-00-00',
+  `deadlineDate` date NOT NULL default '1000-01-01',
   `expectedDuration` smallint(5) unsigned NOT NULL default '0',
   `showInCalendar` tinyint(1) unsigned NOT NULL default '0',
   `showPrivate` tinyint(1) unsigned NOT NULL default '0',
@@ -289,9 +289,9 @@ CREATE TABLE `{$dbPrefix}itemComment` (
   `itemCommentId` bigint(20) unsigned NOT NULL auto_increment,
   `itemId` int(10) unsigned NOT NULL default '0',
   `memberId` mediumint(8) unsigned NOT NULL default '0',
-  `postDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `postDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `body` text NOT NULL,
-  `lastChangeDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `lastChangeDate` datetime NOT NULL default '1000-01-01 00:00:00',
   PRIMARY KEY  (`itemCommentId`),
   KEY `taskId` (`itemId`)
 ) ENGINE=InnoDB;
@@ -306,8 +306,8 @@ CREATE TABLE `{$dbPrefix}itemFile` (
   `filename` varchar(127) NOT NULL default '',
   `filetype` varchar(30) NOT NULL default '',
   `filesize` bigint(20) NOT NULL default '0',
-  `postDate` datetime NOT NULL default '0000-00-00 00:00:00',
-  `lastChangeDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `postDate` datetime NOT NULL default '1000-01-01 00:00:00',
+  `lastChangeDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `fileTags` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`itemFileId`),
   KEY `taskId` (`itemId`)
@@ -318,7 +318,7 @@ $sqlItemStatus = <<< EOSQL
 CREATE TABLE `{$dbPrefix}itemStatus` (
   `itemStatusId` bigint(20) unsigned NOT NULL auto_increment,
   `itemId` int(10) unsigned NOT NULL default '0',
-  `statusDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `statusDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `statusKey` tinyint(3) unsigned NOT NULL default '0',
   `memberId` mediumint(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (`itemStatusId`),
@@ -349,11 +349,11 @@ CREATE TABLE `{$dbPrefix}member` (
   `salt` varchar(8) NOT NULL default '',
   `autoLogin` tinyint(1) NOT NULL default '0',
   `timeZone` smallint(6) NOT NULL default '0',
-  `expirationDate` datetime NOT NULL default '0000-00-00 00:00:00',
-  `lastLoginDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `expirationDate` datetime NOT NULL default '1000-01-01 00:00:00',
+  `lastLoginDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `lastLoginAddress` varchar(60) NOT NULL default '',
-  `creationDate` datetime NOT NULL default '0000-00-00 00:00:00',
-  `lastChangeDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `creationDate` datetime NOT NULL default '1000-01-01 00:00:00',
+  `lastChangeDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `visits` mediumint(8) unsigned NOT NULL default '0',
   `badAccess` tinyint(3) unsigned NOT NULL default '0',
   `level` tinyint(3) unsigned NOT NULL default '0',
@@ -363,7 +363,7 @@ CREATE TABLE `{$dbPrefix}member` (
   PRIMARY KEY  (`memberId`),
   KEY `username` (`username`)
 ) ENGINE=InnoDB;
-INSERT INTO `{$dbPrefix}member` VALUES (1, 'admin@taskfreak.com', 'Mr', 'Admin', '', 'Istrator', '', '', '', 'FR', '', '', '', 'admin', '', '12345678', 0, 7200, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '2006-06-01 00:00:00', '0000-00-00 00:00:00', 0, 0, 4, '', 1, 1);
+INSERT INTO `{$dbPrefix}member` VALUES (1, 'admin@taskfreak.com', 'Mr', 'Admin', '', 'Istrator', '', '', '', 'FR', '', '', '', 'admin', '', '12345678', 0, 7200, '1000-01-01 00:00:00', '1000-01-01 00:00:00', '', '2006-06-01 00:00:00', '1000-01-01 00:00:00', 0, 0, 4, '', 1, 1);
 EOSQL;
 
 $sqlMemberProject = <<< EOSQL
@@ -390,7 +390,7 @@ $sqlProjectStatus = <<< EOSQL
 CREATE TABLE `{$dbPrefix}projectStatus` (
   `projectStatusId` int(10) unsigned NOT NULL auto_increment,
   `projectId` mediumint(10) unsigned NOT NULL default '0',
-  `statusDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `statusDate` datetime NOT NULL default '1000-01-01 00:00:00',
   `statusKey` tinyint(3) unsigned NOT NULL default '0',
   `memberId` mediumint(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (`projectStatusId`),
