@@ -8,14 +8,15 @@
 * License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
 \****************************************************************************/
 
-error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
-
 define('TZN_DB_HOST','localhost');
-define('TZN_DB_USER','wp_user');       // edit here
-define('TZN_DB_PASS',')NfvEd#JH$kQ7).B');           // edit here
-define('TZN_DB_BASE','wordpress');  // edit here
+define('TZN_DB_USER','hardmagi_wp');       // edit here
+define('TZN_DB_PASS','TDv;vb!MN)X;');           // edit here
+define('TZN_DB_BASE','hardmagi_wp');  // edit here
 define('TZN_DB_PREFIX','frk');
 define('TZN_DB_CLASS','tzn_mysql.php');
+
+error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
+
 
 define('TZN_DB_DEBUG',3);
 define('TZN_DB_PERMANENT',0);
