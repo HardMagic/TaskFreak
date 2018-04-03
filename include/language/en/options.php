@@ -29,7 +29,7 @@ $GLOBALS['langProjectPosition'] = array(
 // members global position
 $GLOBALS['langGlobalPosition'] = array(
 	1	=> 'guest',     // access own projects, view only public tasks
-	2	=> 'intern',    // access own projects, create projects, create tasks
+	2	=> 'member',    // access own projects, create projects, create tasks
 	3	=> 'manager',   // access own projects, create projects, tasks
 	4	=> 'administrator' // everything
 );
@@ -48,13 +48,13 @@ $GLOBALS['langItemStatus'] = array(
 
 $GLOBALS['langItemContext'] = array (
 	1 => 'Work',
-	2 => 'Meeting',
-	3 => 'Document',
-	4 => 'Internet',	
-	5 => 'Phone',
-	6 => 'Email',
-	7 => 'Home',
-	8 => 'Other'
+	2 => 'Philanthropy',
+	3 => 'Rest',
+	4 => 'Awaken',	
+	5 => 'Nourish',
+	6 => 'Social',
+	7 => 'Create',
+	8 => 'Mastery'
 );
 
 $GLOBALS['langItemPriority'] = array (
@@ -63,9 +63,9 @@ $GLOBALS['langItemPriority'] = array (
 	3 => 'Medium priority',
 	4 => 'Normal priority',	
 	5 => 'Low priority',
-	6 => 'Low priority',
-	7 => 'Very Low priority',
-	8 => 'Very Low priority',
-	9 => 'Whatever'
+	6 => 'Practice',
+	7 => 'Play',
+	8 => 'Think Tank',
+	9 => 'Dream'
 );
 

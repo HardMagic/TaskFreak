@@ -1,47 +1,5 @@
 <?php
 /**
- * xajax.inc.php :: Main xajax class and setup file
- *
- * xajax version 0.2.4
- * copyright (c) 2005 by Jared White & J. Max Wilson
- * http://www.xajaxproject.org
- *
- * xajax is an open source PHP class library for easily creating powerful
- * PHP-driven, web-based Ajax Applications. Using xajax, you can asynchronously
- * call PHP functions and update the content of your your webpage without
- * reloading the page.
- *
- * xajax is released under the terms of the LGPL license
- * http://www.gnu.org/copyleft/lesser.html#SEC3
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
- * 
- * @package xajax
- * @version $Id: xajax.inc.php,v 1.2 2006/06/22 14:25:40 stan Exp $
- * @copyright Copyright (c) 2005-2006  by Jared White & J. Max Wilson
- * @license http://www.gnu.org/copyleft/lesser.html#SEC3 LGPL License
- */
-
-/*
-   ----------------------------------------------------------------------------
-   | Online documentation for this class is available on the xajax wiki at:   |
-   | http://wiki.xajaxproject.org/Documentation:xajax.inc.php                 |
-   ----------------------------------------------------------------------------
-*/
-
-/**
  * Define XAJAX_DEFAULT_CHAR_ENCODING that is used by both
  * the xajax and xajaxResponse classes
  */

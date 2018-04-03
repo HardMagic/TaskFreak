@@ -16,7 +16,7 @@ $GLOBALS['langParams'] = array(
 $GLOBALS['langMenu'] = array (
 	'task'				=> 'Task',
     'print_list'        => 'Printing version',
-	'new_todo'			=> 'New Todo',
+	'new_todo'			=> 'New Task',
 	'view'				=> 'View',
 	'all_projects'		=> 'All Projects',
 	'future_tasks'		=> 'Future Tasks',
@@ -88,7 +88,7 @@ $GLOBALS['langTaskDetails'] = array (
 $GLOBALS['langDateMore'] = array (
 	'day'				=> 'day',
 	'days'				=> 'days',
-	'help'				=> 'eg. today, tomorrow, 12 apr'
+	'help'				=> 'eg. today, tomorrow, apr 12'
 );
 
 // project related
