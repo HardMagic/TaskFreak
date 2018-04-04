@@ -239,14 +239,14 @@ class ItemStats extends Item
 							return $diff.' '.$GLOBALS['langTznDate']['dasy'];
 							break;
 						default:
-							return '<span class="small">'
+							return '<span>'
 								.$this->getDte('deadlineDate',($short)?'SHT':'SHX','')
 								.'</span>';
 							break;
 					}
 					break;
 				default:
-					return '<span class="small">'
+					return '<span>'
 						.$this->getDte('deadlineDate','SHT','')
 						.'</span>';
 					break;
