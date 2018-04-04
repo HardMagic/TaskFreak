@@ -2,12 +2,12 @@ body {
 	margin: 0px;
 	padding: 0px;
 	margin-bottom: 6px;
-	background-color: #000;
+	background-color: #25252d;
 }
 div#horiz {
 	width: 500px;
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: medium;
+	font-size: large;
 	text-align: left;
 }
 div#header {
@@ -360,7 +360,7 @@ table.sheet th.rr {
 }
 table.sheet td {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: medium;
+	font-size: large;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
 }

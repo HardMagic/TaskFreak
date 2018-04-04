@@ -15,7 +15,7 @@ $objUserProjectList->loadList($objUser->id,(!$objUser->checkLevel(6)));
     	    <th><?php echo $GLOBALS['langForm']['priority']; ?>:</th>
     	    <td><?php
                 $objTemp = new ItemPriority();
-                $objTemp->qSelect('priority',($objTask->priority)?$objTask->priority:3,'','','style="width:40px"');
+                $objTemp->qSelect('priority',($objTask->priority)?$objTask->priority:3,'','','style="width:140px"');
             ?></td>
 		<?php
 			if (@constant('FRK_CONTEXT_ENABLE')) {

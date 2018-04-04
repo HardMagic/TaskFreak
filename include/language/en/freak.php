@@ -40,8 +40,8 @@ $GLOBALS['langMenu'] = array (
 // fields and column labels
 $GLOBALS['langForm'] = array (
 	'priority'			=> 'Priority',
-	'context'			=> 'Context',
-	'deadline'			=> 'Deadline',
+	'context'			=> 'Type',
+	'deadline'			=> 'End Sprint',
 	'project'			=> 'Project',
 	'tasks'				=> 'Tasks',
 	'title'				=> 'Title',
