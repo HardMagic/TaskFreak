@@ -1,7 +1,8 @@
 <?php
 
 include '_common.php';
-
+echo "Line 3";
+break;
 /* --- INIT ----------------------------------------------------------- */
 
 $objEditItem = new ProjectStats();

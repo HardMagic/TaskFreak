@@ -8,7 +8,12 @@
 * License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
 \****************************************************************************/
 
-
+define('TZN_DB_HOST','localhost');
+define('TZN_DB_USER','hardmagi_wp');       // edit here
+define('TZN_DB_PASS','TDv;vb!MN)X;');           // edit here
+define('TZN_DB_BASE','hardmagi_wp');  // edit here
+define('TZN_DB_PREFIX','frk');
+define('TZN_DB_CLASS','tzn_mysql.php');
 
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
