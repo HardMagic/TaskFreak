@@ -8,20 +8,15 @@
 * License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
 \****************************************************************************/
 
-define('TZN_DB_HOST','localhost');
-define('TZN_DB_USER','hardmagi_wp');       // edit here
-define('TZN_DB_PASS','TDv;vb!MN)X;');           // edit here
-define('TZN_DB_BASE','hardmagi_wp');  // edit here
-define('TZN_DB_PREFIX','frk');
-define('TZN_DB_CLASS','tzn_mysql.php');
+
 
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 
-define('TZN_DB_DEBUG',3);
+define('TZN_DB_DEBUG',0);
 define('TZN_DB_PERMANENT',0);
 
-define('TZN_DEBUG',1);
+define('TZN_DEBUG',0);
 define('TZN_SPECIALCHARS',2);
 define('TZN_HTMLMODE','html');
 define('TZN_BOOL_TRUE','<img src="images/check_yes.png" width="12" height="13" border="0" />');
@@ -45,8 +40,8 @@ define('TZN_USER_ID_LENGTH',8);		// length of room/user ID
 define('TZN_USER_LOGIN','username');// Login mode = username OR email
 define('TZN_USER_NAME_MIN',3);		// minimum length for username
 define('TZN_USER_NAME_MAX',10);		// maximum length for username
-define('TZN_USER_PASS_MIN',3);		// minimum length for password
-define('TZN_USER_PASS_MAX',10);		// maximum length for password
+define('TZN_USER_PASS_MIN',7);		// minimum length for password
+define('TZN_USER_PASS_MAX',16);		// maximum length for password
 define('TZN_USER_PASS_MODE',4);
 
 define('TZN_FILE_RANDOM',false);
@@ -76,8 +71,8 @@ define('PRJ_WWW_URL','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SEL
 
 // === TASKFREAK CUSTOMIZATION ================================
 
-define('FRK_VERSION','0.8.0');
-define('FRK_VERSION_RELEASE','2010-06-27');
+define('FRK_VERSION','0.9.1');
+define('FRK_VERSION_RELEASE','2018-04-03');
 
 define('FRK_MYSQL_VERSION_GT_4_1',TRUE);
 
@@ -90,7 +85,7 @@ define('FRK_CONTEXT_ENABLE',TRUE);	// TRUE or FALSE
 // add description to tasks / todos
 define('FRK_DESCRIPTION_ENABLE',TRUE);		// TRUE OR FALSE
 // default user's country
-define('FRK_DEFAULT_COUNTRY','FR');
+define('FRK_DEFAULT_COUNTRY','US');
 // charset (for unicode support)
 define('FRK_CHARSET','UTF-8');
 // use only if you have encoding/utf8 problems
@@ -109,7 +104,7 @@ define('FRK_DEFAULT_SORT_ORDER',1); // 1 = Ascending, -1 = Descending
 // language of the interface
 define('FRK_DEFAULT_LANGUAGE','en');	// en, fr, it, de, nl, da, zh, pl
 // TaskFreak! skin
-define('FRK_DEFAULT_SKIN_FOLDER','redfreak'); // or bluefreak
+define('FRK_DEFAULT_SKIN_FOLDER','bluefreak'); // or redfreak
 // show own tasks or all users' tasks by default
 define('FRK_DEFAULT_VIEW_OWN_TASKS',FALSE);
 // limit number of tasks to show at once (applies to today's task view only)
@@ -117,11 +112,11 @@ define('FRK_DEFAULT_CURRENT_TASKS',0); // 0 = no limit
 // includes tasks with no deadline by default or not
 define('FRK_DEFAULT_NO_DEADLINE_TOO',TRUE);	// TRUE or FALSE 
 // when task is marked as done, keep in task list for X days
-define('FRK_DEFAULT_NO_DEADLINE_KEEP',0);	// number of days 
+define('FRK_DEFAULT_NO_DEADLINE_KEEP',1);	// number of days 
 // deadline: displays day of the week (or tomorrow) or '1 day'
-define('FRK_DEFAULT_DATEDIFF_MODE','day');	// day or diff or date
+define('FRK_DEFAULT_DATEDIFF_MODE','diff');	// day or diff or date
 // deadline: displays 'tomorrow' for next day 
-define('FRK_DEFAULT_DATEDIFF_TOMORROW',TRUE); // TRUE or FALSE
+define('FRK_DEFAULT_DATEDIFF_TOMORROW',FALSE); // TRUE or FALSE
 // show full text (true) or icons (false)
 define('FRK_DEFAULT_CONTEXT_LONG',FALSE);	// TRUE or FALSE
 // number of items in RSS file (set to 0 if you don't want to enable RSS)
@@ -135,7 +130,7 @@ define('FRK_DEFAULT_COMMENT_ORDER','ASC');
 // update deadline on completed
 define('FRK_COMPLETE_DEADLINE',TRUE);
 // US date format mm/dd (eg. 14th may = 5/14 vs. 14/5)
-define('TZN_DATE_US_FORMAT',FALSE);
+define('TZN_DATE_US_FORMAT',TRUE);
 // do you need confirmation when setting task as completed (from task list)
 define('FRK_CONFIRM_STATUS_CLOSE',TRUE);
 // do not keep user connected (disable background ajax request)
