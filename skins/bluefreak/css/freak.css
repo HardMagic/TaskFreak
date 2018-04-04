@@ -89,7 +89,7 @@ body>div#header {
 }
 #rightmenu select {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: 9px;
+	font-size: 12px;
 	font-weight: normal;
 	border: 0px solid #007C99;
 }
@@ -165,7 +165,6 @@ body>div#header {
    width: 126px;
    margin: 0px;
    padding: 2px 3px 2px 3px;
-   font-size: 11px;
    background-color: #1997B4;
    border-left: 1px solid #8a8ada;
    border-right: 1px solid #8a8ada;
@@ -432,7 +431,7 @@ table.sheet td.ctlg {
 }
 table.sheet td.ctsh span {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: 10px;
+	font-size: 16px;
 	color: #fff;
 	text-align: center;
 	padding: 2px 4px 1px 4px;
@@ -491,7 +490,7 @@ a.small:hover {
 	width: 500px;
 	padding: 5px;
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: small;
+	font-size: medium;
 	background-color: #fff;
 	border: 1px solid #666;
 	text-align: left;
@@ -544,7 +543,7 @@ table.setting th {
 #fview div.flabel {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
-	color: #bbb;
+	color: #638ba8;
 }
 #fview div.flabel2 {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
