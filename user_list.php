@@ -1,28 +1,5 @@
 <?php
-/****************************************************************************\
-* TaskFreak!                                                                 *
-* multi user                                                                 *
-******************************************************************************
-* Version: 0.6.3                                                             *
-* Authors: Stan Ozier <taskfreak@gmail.com>                                  *
-* License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
-******************************************************************************
-* This file is part of "TaskFreak! multi user" program.                      *
-*                                                                            *
-* TaskFreak! multi user is free software; you can redistribute it and/or     *
-* modify it under the terms of the GNU General Public License as published   *
-* by the Free Software Foundation; either version 2 of the License, or (at   *  
-* your option) any later version.                                            *
-*                                                                            *
-* TaskFreak! multi user is distributed in the hope that it will be           *
-* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of     *
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the              *
-* GNU General Public License for more details.                               *
-*                                                                            *
-* You should have received a copy of the GNU General Public License          *
-* along with this program; if not, write to the Free Software                *
-* Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA *
-\****************************************************************************/
+
 
 include '_common.php';
 
@@ -73,9 +50,9 @@ $objItemList = new Member();
 // --- search criterions ---
 
 if ($sName = $_REQUEST['keyword']) {
-	if (ereg('^".*"$',$sName)) {
+	if (preg_match('/^".*"$/',$sName)) {
 		$hParam = str_replace('"','',$sName);
-	} else if (ereg('\*',$iName)) {
+	} else if (preg_match('/\*/',$iName)) {
 		$hParam = str_replace('*','%',$sName);
 	} else {
 		$hParam = '%'.str_replace(' ','%',$sName).'%';

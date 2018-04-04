@@ -15,7 +15,7 @@ $GLOBALS['langParams'] = array(
 // top menu / navigation
 $GLOBALS['langMenu'] = array (
 	'task'				=> 'Task',
-    'print_list'        => 'Printing version',
+    'print_list'        => 'Print View',
 	'new_todo'			=> 'New Task',
 	'view'				=> 'View',
 	'all_projects'		=> 'All Projects',
@@ -23,7 +23,7 @@ $GLOBALS['langMenu'] = array (
 	'past_tasks'		=> 'Past Tasks',
     'my_tasks'          => 'My Tasks',
 	'all_tasks'			=> 'All Tasks',
-	'all_contexts'		=> 'All Contexts',
+	'all_contexts'		=> 'All Types',
 	'all_users' 		=> 'All Users',
 	'reload'			=> 'Reload',
 	'manage'			=> 'Manage',

@@ -4,8 +4,7 @@
             <div id="fviewdelete"><a href="javascript:freak_del(ff.elements['id'].value)" onClick="return confirm('<?php echo $GLOBALS['langMessage']['task_delete_confirm']; ?>')"><?php echo $GLOBALS['langForm']['delete']; ?><img src="skins/<?php echo FRK_SKIN_FOLDER; ?>/images/b_deln.png" width="20" height="16" border="0" alt="delete" /></a></div>
         </div>
         <div id="fprio">
-            <div class="flabel"><?php echo $GLOBALS['langForm']['priority']; ?></div>
-			<div id="vprio"><span class="pr<?php  echo $objTask->priority; ?>"><?php echo $objTask->priority; ?></span></div>
+            <div id="vprio"><span class="pr<?php  echo $objTask->priority; ?>"><?php echo $objTask->priority; ?></span></div>
         </div>
         <div id="fdead">
     	    <div class="flabel"><?php echo $GLOBALS['langForm']['deadline']; ?></div>

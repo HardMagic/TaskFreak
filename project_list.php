@@ -41,9 +41,9 @@ $objItemList = new ProjectStatsFull();
 // --- search criterions ---
 
 if ($sName = $_REQUEST['name']) {
-	if (ereg('^".*"$',$sName)) {
+	if (preg_match('/^".*"$/',$sName)) {
 		$hParam = str_replace('"','',$sName);
-	} else if (ereg('\*',$iName)) {
+	} else if (preg_match('/\*/',$iName)) {
 		$hParam = str_replace('*','%',$sName);
 	} else {
 		$hParam = '%'.str_replace(' ','%',$sName).'%';

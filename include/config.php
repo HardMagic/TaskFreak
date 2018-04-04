@@ -1,12 +1,5 @@
 <?php
-/****************************************************************************\
-* TaskFreak!                                                                 *
-* multi user                                                                 *
-******************************************************************************
-* Version: 0.6.4                                                             *
-* Authors: Stan Ozier <taskfreak@gmail.com>                                  *
-* License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
-\****************************************************************************/
+
 
 define('TZN_DB_HOST','localhost');
 define('TZN_DB_USER','hardmagi_wp');       // edit here
@@ -15,13 +8,15 @@ define('TZN_DB_BASE','hardmagi_wp');  // edit here
 define('TZN_DB_PREFIX','frk');
 define('TZN_DB_CLASS','tzn_mysql.php');
 
+#error_reporting(-1);
+#ini_set("display_errors", 1);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 
-define('TZN_DB_DEBUG',0);
+define('TZN_DB_DEBUG',1);
 define('TZN_DB_PERMANENT',0);
 
-define('TZN_DEBUG',0);
+define('TZN_DEBUG',1);
 define('TZN_SPECIALCHARS',2);
 define('TZN_HTMLMODE','html');
 define('TZN_BOOL_TRUE','<img src="images/check_yes.png" width="12" height="13" border="0" />');

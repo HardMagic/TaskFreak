@@ -2,7 +2,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	margin-bottom: 6px;
-	background-color: #25252d;
+	background-color: #bdbdbd;
 }
 div#horiz {
 	width: 500px;
@@ -210,6 +210,7 @@ body>div#header {
 #container {
 	position: relative;
 	top: 66px;
+	background-color: #d9d9d9;
 	width: 98%;
 	left: 1%;
 	z-index: 10;
@@ -238,6 +239,9 @@ body>div#header {
 	width: 14px;
 }
 #content {
+}
+#printcontent {
+	background-color: #fff;
 }
 #content h4 {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -345,10 +349,10 @@ table.sheet tr.disabled td {
 }
 table.sheet th {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: small;
+	font-size: large;
 	text-align: left;
-	font-variant: small-caps;
-	background-color: #ccc;
+	font-variant: all-small-caps;
+	background-color: #d9d9d9;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
 }
@@ -488,10 +492,10 @@ a.small:hover {
 	top: 54px;
 	left: 50%;
 	margin-left: -250px;
-	width: 500px;
 	padding: 5px;
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: medium;
+	font-variant: all-small-caps;
+	font-size: large;
 	background-color: #fff;
 	border: 1px solid #666;
 	text-align: left;
@@ -601,6 +605,7 @@ table.setting th {
 form {
 	margin: 0px;
 	padding: 0px;
+	background-color: #d5d5d5;
 }
 #vedit {
 	position: relative;
@@ -692,7 +697,9 @@ form label {
 }
 fieldset {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: small;
+	font-size: medium;
+	font-variant: all-small-caps;
+	background-color: #fff;
 }
 fieldset legend {
 	font-size: medium;
@@ -726,6 +733,7 @@ h1.printheader {
 }
 .printbox {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	background-color: #fff;
 	font-size: .9em;
 	margin: 5px 0px 15px 0px;
 	padding: 8px;

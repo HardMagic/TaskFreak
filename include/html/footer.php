@@ -1,5 +1,5 @@
 <?php
-if ($pPageIsPublic && (ereg('(log(in|out)|user_password)\.php',$_SERVER['PHP_SELF']))) {
+if ($pPageIsPublic && (preg_match('/(log(in|out)|user_password)\.php/',$_SERVER['PHP_SELF']))) {
 ?>
 </div>
 <div id="footer" class="butt">

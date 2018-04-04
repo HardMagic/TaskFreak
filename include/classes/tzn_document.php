@@ -1,46 +1,4 @@
 <?PHP
-/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
-
-/**
- * Tirzen Framework (TZN)
- *
- * This declares the common class from which any object from the TZN shall
- * inherit. It is compatible with PHP versions 4 and 5.
- *
- * THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
- * MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
- *
- * This package is licensed under the LGPL License
- * Copyright (C) 2006 Stan Ozier
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
- *
- * @package    Tirzen Framework
- * @author     Stan Ozier <tech@tirzen.com>
- * @copyright  2006-2010 - Stan Ozier
- * @license    http://www.gnu.org/licenses/lgpl.txt (LGPL)
- * @link       http://www.tirzen.com/tzn/
- * @version    1.8
- */
-
-/**
- * TZN: Tirzen Framework (TZN) common/generic class
- *
- * @package    TZN
- * @author     Stan Ozier <stan@sweetlava.com>
- * @version    1.8
- */
 
 /*
 define('TZN_FILE_ICONS_PATH','');
@@ -104,7 +62,7 @@ class TznFile extends Tzn {
     }
 
 	function isImage() {
-		return ereg("jpg|jpeg|png|gif",$this->fileType);
+		return preg_match("/jpg|jpeg|png|gif/",$this->fileType);
 	}
 
 	function pIcon($option="") {

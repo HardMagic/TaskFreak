@@ -1,46 +1,4 @@
 <?php
-/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
-
-/**
- * Tirzen Framework (TZN)
- *
- * This declares the common class from which any object from the TZN shall
- * inherit. It is compatible with PHP versions 4 and 5.
- *
- * THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
- * WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
- * MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
- *
- * This package is licensed under the LGPL License
- * Copyright (C) 2006 Stan Ozier
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
- *
- * @package    Tirzen Framework MySQL database
- * @author     Stan Ozier <tech@tirzen.com>
- * @copyright  2006-2010 - Stan Ozier
- * @license    http://www.gnu.org/licenses/lgpl.txt (LGPL)
- * @link       http://www.tirzen.net/tzn/
- * @version    1.8
- */
- 
-/**
- * TZN: Tirzen Framework (TZN) (mysql) DB class
- *
- * @package    TZN-mySQL
- * @author     Stan Ozier <stan@tirzen.net>
- * @version    1.8
- */
 
 
 
@@ -57,12 +15,6 @@ define("TZN_DB_PERMANENT",1);
 define('TZN_DB_COUNT_OFF',111);
 define('TZN_DB_COUNT_AUTO',112);
 
-/**
- * DB Connection
- * connects to mySQL database
- * @author   Stan Ozier <stan@tirzen.net>
- * @package  TZN-mySQL
- */
 
 class TznDbConnection {
 	var $_dbHost;
@@ -197,7 +149,7 @@ class TznDbConnection {
 
 /**
  * DB Result
- * represents a mySQL result set
+ * represents a mySQLi result set
  * @author   Stan Ozier <stan@ozier.net>
  * @package  DB
  */
@@ -461,7 +413,7 @@ class TZNStaticResult {
 
 /**
  * DB Object
- * every object representing data stored in mySQL
+ * every object representing data stored in mySQLi
  * shall inherit from this class
  * @author   Stan Ozier <stan@ozier.net>
  * @package  DB
@@ -577,7 +529,7 @@ class TznDb extends Tzn {
     }
     
     function sqlLimit() {
-    	// mySQL only
+    	// mySQLi only
 		if (!$this->_pageSize) {
 			return false; // no paging
 		}
@@ -941,7 +893,7 @@ class TznDb extends Tzn {
 		$strSql .= $this->zPropsToSql();
 		$this->getConnection();
 		if ($this->query($strSql)) {
-            $this->id = mysqli_insert_id();
+            $this->id = $this->insert_id;
 			if (!$this->id) {
 				return true;
 			} else {
@@ -962,7 +914,7 @@ class TznDb extends Tzn {
 		$this->getConnection();
 		if ($this->query($strSql)) {
 			if (!$this->id) {
-				$this->id = mysqli_insert_id();
+				$this->id = $this->insert_id;
 			}
 			return $this->id;
 		} else {

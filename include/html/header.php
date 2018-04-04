@@ -208,7 +208,7 @@ if ($pUserIsLogged) {
 // ------------ ERROR / INFO MESSAGE -------------------------------------
 
 		if ($pMessageStatus) {
-            if (ereg('ERROR:',$pMessageStatus)) {
+            if (preg_match('/ERROR:/',$pMessageStatus)) {
                 $messStyle = ' class="error"';
                 $pMessageStatus = substr($pMessageStatus,6);
             } else {

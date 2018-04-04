@@ -304,6 +304,7 @@ class ItemStats extends Item
 
 	function load($userId) {
 		if (!$this->id) {
+			echo "here";
 			return false;
 		}
         if (@constant('FRK_MYSQL_VERSION_GT_4_1')) {

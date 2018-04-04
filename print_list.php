@@ -34,7 +34,7 @@ if ($pUser = intval($_REQUEST['sUser'])) {
     $_SESSION['selUser'] = $pUser;
 } else {
     unset($_SESSION['selUser']);
-    session_unregister('selUser');
+    unset('selUser');
 }
 
 if ($_REQUEST['sContext']) {
