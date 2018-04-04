@@ -67,8 +67,8 @@ p.error {
 <div align="center">
   <div id="horiz">
 	<p>&nbsp;</p>
-	<p><img src="skins/redfreak/images/freak-logo.png" border="0" alt="TaskFreak!" /></p>
-    <p>Houston, there's a problem...!</p>
+	<p><img src="skins/bluefreak/images/freak-logo.png" border="0" alt="TaskFreak!" /></p>
+    <p>An error occured</p>
   <?php
   
 	if ($_REQUEST['tznMessage']) {

@@ -247,6 +247,7 @@ include PRJ_INCLUDE_PATH.'html/header.php';
 			</tr>
 		</table>
         <?php
+	
             if ($objEditItem->id) {
         ?>
         <div id="status_history" style="display:none">
