@@ -217,7 +217,7 @@ class ProjectStats extends Project
             return false;
         }
         if (@constant('FRK_MYSQL_VERSION_GT_4_1')) {
-            // optimize for mysql > 4.1
+            // optimize for mysql > 5.7.6
             $sqlSelect = 'SELECT pp.*, ps.statusKey AS projectStatus_statusKey, '
                 .'p1.position AS memberProject_position, ps.statusDate AS projectStatus_statusDate '
                 .'FROM '.$this->gTable().' AS pp '
@@ -227,7 +227,7 @@ class ProjectStats extends Project
                 .' WHERE ps.statusDate=(SELECT MAX(ps2.statusDate) FROM '.$this->gTable('projectStatus')
                 .' AS ps2 WHERE pp.projectId = ps2.projectId) '
                 .' AND ps.projectId = '.$this->id
-                .' GROUP BY ps.projectId';
+                .' GROUP BY ps.projectId, p1.position, ps.statusKey, ps.statusDate';
         } else {
             $sqlSelect = 'SELECT pp.*, p1.position AS memberProject_position, '
                 .'SUBSTRING(MAX(CONCAT(ps.statusDate,ps.statusKey)),1,19) AS projectStatus_statusDate, '
@@ -237,7 +237,7 @@ class ProjectStats extends Project
                 .(($strict)?'INNER':'LEFT').' JOIN '.$this->gTable('memberProject')
                     .' AS p1 ON p1.projectId=pp.projectId AND p1.memberId='.$userId
                 .' WHERE ps.projectId = '.$this->id
-                .' GROUP BY ps.projectId';
+                .' GROUP BY ps.projectId, p1.position, ps.statusDate, ps.statusKey';
         }
 
         //echo '<div class="debug">'.$sqlSelect.'</div>'; exit;
