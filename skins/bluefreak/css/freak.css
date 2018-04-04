@@ -81,8 +81,10 @@ body>div#header {
 }
 #rightmenu {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: 10px;
+	font-variant: all-petite-caps;
+	font-size: 14px;
 	font-weight: bold;
+	padding: 1px 3px 1px 3px;
 	color: #fff;
 }
 #rightmenu select {
@@ -109,13 +111,14 @@ body>div#header {
 }
 #menu li { /* all list items */
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: 12px;
+	font-variant: all-petite-caps;
+	font-size: 16px;
 	font-weight: bold;
 	float: left;
 	position: relative;
 	color: #fff;
 	margin: 0px;
-	padding: 4px 30px 4px 3px;
+	padding: 0px 30px 4px 3px;
 	z-index: 55;
 	cursor: default;
 }
@@ -344,6 +347,7 @@ table.sheet th {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	text-align: left;
+	font-variant: small-caps;
 	background-color: #ccc;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
@@ -361,6 +365,7 @@ table.sheet th.rr {
 table.sheet td {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: large;
+    font-variant: all-petite-caps;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
 }
