@@ -2,12 +2,12 @@ body {
 	margin: 0px;
 	padding: 0px;
 	margin-bottom: 6px;
-	background-color: #fff;
+	background-color: #000;
 }
 div#horiz {
 	width: 500px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: small;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-size: medium;
 	text-align: left;
 }
 div#header {
@@ -35,7 +35,7 @@ body>div#header {
 	border-bottom: 1px solid #fff;
 }
 #user {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	color: #fff;
 	float: right;
 	text-align: right;
@@ -80,13 +80,13 @@ body>div#header {
 	height: 17px;
 }
 #rightmenu {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 10px;
 	font-weight: bold;
 	color: #fff;
 }
 #rightmenu select {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 9px;
 	font-weight: normal;
 	border: 0px solid #007C99;
@@ -108,7 +108,7 @@ body>div#header {
 	list-style: none;
 }
 #menu li { /* all list items */
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 12px;
 	font-weight: bold;
 	float: left;
@@ -216,16 +216,16 @@ body>div#header {
 	top: -66px;
 	right: 10px;
 	width: 500px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	text-align: right;
 }
 #filters select {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
 }
 #filters input {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
 	width: 30px;
 	background-color: #ccc;
@@ -237,12 +237,12 @@ body>div#header {
 #content {
 }
 #content h4 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	margin: 12px 0px 9px 0px;
 }
 #content p {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	margin: 6px 0px 3px 0px;
 }
@@ -258,7 +258,7 @@ div.tabmenu ul {
 	list-style: none;
 }
 div.tabmenu li {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
 	position: relative;
 	float: left;
@@ -341,7 +341,7 @@ table.sheet tr.disabled td {
 	color: #666;
 }
 table.sheet th {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	text-align: left;
 	background-color: #ccc;
@@ -359,8 +359,8 @@ table.sheet th.rr {
 	text-align: right;
 }
 table.sheet td {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: small;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-size: medium;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
 }
@@ -368,7 +368,7 @@ table.sheet th.act, table.sheet td.act {
 	text-align: center;
 }
 table.sheet input, table.sheet textarea {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 12px;
 	background-color: #fff;
 	width: 95%;
@@ -412,7 +412,7 @@ table.sheet td.prio {
 	text-align: center;
 }
 table.sheet td.prio span, #vprio span {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 10px;
 	color: #fff;
 	text-align: center;
@@ -426,7 +426,7 @@ table.sheet td.ctlg {
 	font-size: x-small;
 }
 table.sheet td.ctsh span {
-	font-family: "Courier New", Courier, monospace;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 10px;
 	color: #fff;
 	text-align: center;
@@ -468,7 +468,7 @@ a.small:hover {
 	margin-left: -200px;
 	width: 400px;
 	padding: 5px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	background-color: #ffc;
 	border: 1px solid #666;
@@ -485,7 +485,7 @@ a.small:hover {
 	margin-left: -250px;
 	width: 500px;
 	padding: 5px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	background-color: #fff;
 	border: 1px solid #666;
@@ -493,7 +493,7 @@ a.small:hover {
 	z-index: 20;
 }
 table.setting {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 	width: 100%;
 }
@@ -537,12 +537,12 @@ table.setting th {
 	margin: 160px 0px 170px 0px;
 }
 #fview div.flabel {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
 	color: #bbb;
 }
 #fview div.flabel2 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: x-small;
 	color: #ccc;
 	float: left;
@@ -655,7 +655,7 @@ form {
 #footer {
 	margin: 12px 0px 100px 0px;
 	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: xx-small;
 	color: #666;
 }
@@ -686,7 +686,7 @@ form label {
 	cursor: pointer;
 }
 fieldset {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: small;
 }
 fieldset legend {
@@ -720,20 +720,20 @@ h1.printheader {
 	display: none;
 }
 .printbox {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: .9em;
 	margin: 5px 0px 15px 0px;
 	padding: 8px;
 	border: 1px solid #333;
 }
 div.printbox h2 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 1.1em;
 	margin: 0px 0px 15px 0px;
 	padding: 0px;
 }
 div.printbox div.description {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: .9em;
 	margin: 9px 0px 0px 0px;
 }

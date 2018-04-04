@@ -6,7 +6,7 @@ config.php
 Desktop.ini
 
 #TaskFreak Config
-/include/config.php
+include/config.php
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
