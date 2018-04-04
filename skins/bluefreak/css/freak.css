@@ -31,7 +31,7 @@ body>div#header {
 	height: 30px;
 	padding: 0px;
 	margin: 0px;
-	background-color: #666;
+	background-color: #007c99;
 	border-bottom: 1px solid #fff;
 }
 #user {
@@ -89,6 +89,7 @@ body>div#header {
 }
 #rightmenu select {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-variant: all-small-caps;
 	font-size: 12px;
 	font-weight: normal;
 	border: 0px solid #007C99;
@@ -417,7 +418,7 @@ table.sheet td.prio {
 }
 table.sheet td.prio span, #vprio span {
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-size: 10px;
+	font-size: 16px;
 	color: #fff;
 	text-align: center;
 	padding: 2px 4px 1px 4px;
